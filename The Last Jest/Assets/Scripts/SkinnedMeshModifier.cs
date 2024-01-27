@@ -11,11 +11,8 @@ public class SkinnedMeshModifier : MonoBehaviour
         skinnedRenderer = GetComponent<SkinnedMeshRenderer>();
     }
 
-    private void Update()
+    public void SetSliderValue(float value)
     {
-        if (skinnedRenderer != null)
-        {
-            skinnedRenderer.SetBlendShapeWeight(0, 100.0f * (1.0f + Mathf.Sin(Time.time * 10.0f)) / 2.0f );
-        }
+        skinnedRenderer.SetBlendShapeWeight(0, value);
     }
 }

@@ -55,12 +55,19 @@ public class Character : MonoBehaviour
     public GameObject FaceObject;
     public GameObject TextObject;
 
+    SkinnedMeshModifier headModifier;
+
     protected float AngryMeter = 50;
 
     protected CharacterMultiplier Multipliers;
 
     // TEST TEXT
     protected TMP_Text CharacterText;
+
+    private void Awake()
+    {
+        headModifier = GetComponentInChildren<SkinnedMeshModifier>();
+    }
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -90,6 +97,8 @@ public class Character : MonoBehaviour
     void SetAngryMeter(float newValue)
     { 
         AngryMeter = newValue;
+
+        headModifier.SetSliderValue(newValue);
 
         if (!IsRoyalCharacter())
             return;
