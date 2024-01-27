@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NounSprites:
   - Noun: 0
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 8033d16f7632bf44b9e98a85f2835f94, type: 3}
     UnlockLevel: 0
   - Noun: 5
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: ff442f0962252b74c88c222bb0258d2f, type: 3}
     UnlockLevel: 0
   - Noun: 2
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 095b9aa33baa25a49922e12d70747614, type: 3}
     UnlockLevel: 0
   - Noun: 1
     Sprite: {fileID: 0}
