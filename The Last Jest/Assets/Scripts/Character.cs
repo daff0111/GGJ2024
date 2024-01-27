@@ -31,11 +31,11 @@ public class Character : MonoBehaviour
     public GameObject FaceObject;
     public GameObject TextObject;
 
-    private MeshRenderer FaceMesh;
-    private float AngryMeter = 50;
+    protected MeshRenderer FaceMesh;
+    protected float AngryMeter = 50;
 
     // TEST TEXT
-    private TMP_Text CharacterText;
+    protected TMP_Text CharacterText;
 
     // Start is called before the first frame update
     void Start()

@@ -9,7 +9,6 @@ public class JesterCharacter : Character
     public void DropHead()
     {
         Head.useGravity = true;
-        //Head.transform.position += transform.right * 1;
         Head.AddForce(transform.right * 100);
     }
 }
