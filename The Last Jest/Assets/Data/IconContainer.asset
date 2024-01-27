@@ -39,7 +39,7 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: db480573b57653c46bfeb3bdba4abadc, type: 3}
     UnlockLevel: 0
   - Verb: 2
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: d9ac86d262a319f4e8c42ec91191640a, type: 3}
     UnlockLevel: 1
   - Verb: 3
     Sprite: {fileID: 0}
