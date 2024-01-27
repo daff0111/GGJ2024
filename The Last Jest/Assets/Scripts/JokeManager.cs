@@ -139,6 +139,8 @@ public class JokeManager : MonoBehaviour
         switch (Level)
         {
             case 1:
+                King.SetMultipliers(Level1MultiplierSet.KingMultiplier);
+                King.AddEmotionReaction(EEmotionType.Angry);
                 break;
             case 2:
                 break;
