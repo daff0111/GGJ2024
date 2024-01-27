@@ -14,6 +14,15 @@ public enum EEmotionType
     Angry
 };
 
+[System.Serializable]
+public struct CharacterMultiplier
+{
+    public float HappyMultiplier;
+    public float EmbarrassedMultiplier;
+    public float CryingMultiplier;
+    public float AngryMultiplier;
+}
+
 public class Character : MonoBehaviour
 {
     public enum ECharacterType 
@@ -48,10 +57,7 @@ public class Character : MonoBehaviour
 
     protected float AngryMeter = 50;
 
-    protected float HappyMultiplier = 1;
-    protected float EmbarrassedMultiplier = 1;
-    protected float CryingMultiplier = 1;
-    protected float AngryMultiplier = 1;
+    protected CharacterMultiplier Multipliers;
 
     // TEST TEXT
     protected TMP_Text CharacterText;
@@ -162,26 +168,23 @@ public class Character : MonoBehaviour
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
-                return 5 * HappyMultiplier;
+                return 5 * Multipliers.HappyMultiplier;
             case EEmotionType.Neutral:
                 return 0;
             case EEmotionType.Embarrassed:
-                return -5 * EmbarrassedMultiplier;
+                return -5 * Multipliers.EmbarrassedMultiplier;
             case EEmotionType.Crying:
-                return -5 * CryingMultiplier;
+                return -5 * Multipliers.CryingMultiplier;
             case EEmotionType.Angry:
-                return -5 * AngryMultiplier;
+                return -5 * Multipliers.AngryMultiplier;
             default:
                 break;
         }
         return 0;
     }
 
-    public void SetMultipliers(float happy, float embarrassed, float crying, float angry)
+    public void SetMultipliers(CharacterMultiplier newMultiplier)
     {
-        HappyMultiplier = happy;
-        EmbarrassedMultiplier = embarrassed;
-        CryingMultiplier = crying;
-        AngryMultiplier = angry;
+        Multipliers = newMultiplier;
     }
 }
