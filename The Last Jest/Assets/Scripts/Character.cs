@@ -55,6 +55,8 @@ public class Character : MonoBehaviour
     public GameObject FaceObject;
     public GameObject TextObject;
 
+    SkinnedMeshModifier headModifier;
+
     protected float AngryMeter = 50;
 
     protected CharacterMultiplier Multipliers;
@@ -62,14 +64,16 @@ public class Character : MonoBehaviour
     // TEST TEXT
     protected TMP_Text CharacterText;
 
+    private void Awake()
+    {
+        headModifier = GetComponentInChildren<SkinnedMeshModifier>();
+    }
+
     // Start is called before the first frame update
     protected virtual void Start()
     {
         CharacterText = TextObject.GetComponent<TMP_Text>();
-        
         SetAngryMeter(StartingAngryMeter);
-        /*if (IsRoyalCharacter())
-            FaceMesh.material = MaterialNeutralFace;*/
 
         // TEST TEXT
         CharacterText.gameObject.GetComponent<MeshRenderer>().enabled = IsRoyalCharacter();
@@ -87,9 +91,11 @@ public class Character : MonoBehaviour
         return AngryMeter; 
     }
 
-    void SetAngryMeter(float newValue)
+    public void SetAngryMeter(float newValue)
     { 
         AngryMeter = newValue;
+
+        headModifier.SetSliderValue((((StartingAngryMeter - newValue)/StartingAngryMeter)*180)-50); //Magic number to match Happyness on the face
 
         if (!IsRoyalCharacter())
             return;

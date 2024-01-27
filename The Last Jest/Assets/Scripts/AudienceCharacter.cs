@@ -10,11 +10,14 @@ public class AudienceCharacter : Character
     {
         CharacterType = ECharacterType.Audience;
         base.Start();
+        foreach (Character aCharacter in audienceCharacters)
+        {
+            aCharacter.StartingAngryMeter = StartingAngryMeter;
+        }
     }
 
     public override void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
-        Debug.Log("Audience " + emotionReaction.ToString());
         AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
         switch (emotionReaction)
         {
@@ -38,7 +41,7 @@ public class AudienceCharacter : Character
         }
         foreach (Character aCharacter in audienceCharacters)
         {
-            aCharacter.AddEmotionReaction(emotionReaction, multiplier);
+            aCharacter.SetAngryMeter(GetAngryMeter());
         }
     }
 }
