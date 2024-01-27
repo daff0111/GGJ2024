@@ -103,29 +103,35 @@ public class JokeManager : MonoBehaviour
         {
             case EJokeType.A:
                 Debug.Log("The Queen likes to slap the Executioner");
-                King.AddAngryMeter(20);
-                Queen.AddAngryMeter(-20);
-                Executioner.AddAngryMeter(-20);
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Angry);
+                Princess.AddEmotionReaction(EEmotionType.Angry);
+                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                //Public.AddReaction
                 break;
             case EJokeType.B:
                 Debug.Log("The King has a big butt");
-                King.AddAngryMeter(-40);
-                Queen.AddAngryMeter(20);
-                Princess.AddAngryMeter(20);
+                King.AddEmotionReaction(EEmotionType.Angry);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Princess.AddEmotionReaction(EEmotionType.Neutral);
+                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                //Public.AddReaction
                 break;
             case EJokeType.C:
                 Debug.Log("The Princess calls the king Poopface");
-                King.AddAngryMeter(-10);
-                Queen.AddAngryMeter(10);
-                Princess.AddAngryMeter(-20);
-                Executioner.AddAngryMeter(20);
+                King.AddEmotionReaction(EEmotionType.Embarrassed);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Princess.AddEmotionReaction(EEmotionType.Angry);
+                Executioner.AddEmotionReaction(EEmotionType.Happy);
+                //Public.AddReaction
                 break;
             case EJokeType.D:
                 Debug.Log("The Princess is a spoiled Bratt");
-                King.AddAngryMeter(20);
-                Queen.AddAngryMeter(10);
-                Princess.AddAngryMeter(-30);
-                Executioner.AddAngryMeter(20);
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Princess.AddEmotionReaction(EEmotionType.Crying);
+                Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                //Public.AddReaction
                 break;
             default:
                 break;

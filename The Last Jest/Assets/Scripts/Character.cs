@@ -5,6 +5,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum EEmotionType
+{
+    Happy,
+    Neutral,
+    Embarrassed,
+    Crying,
+    Angry
+};
+
 public class Character : MonoBehaviour
 {
     public enum ECharacterType 
@@ -25,9 +34,13 @@ public class Character : MonoBehaviour
     };
 
     public ECharacterType CharacterType;
+    [Header("Emotion Materials")]
     public Material MaterialHappyFace;
     public Material MaterialNeutralFace;
+    public Material MaterialCryingFace;
+    public Material MaterialEmbarrassedFace;
     public Material MaterialAngryFace;
+    [Header("Child Objects")]
     public GameObject FaceObject;
     public GameObject TextObject;
 
@@ -43,8 +56,9 @@ public class Character : MonoBehaviour
         FaceMesh = FaceObject.GetComponent<MeshRenderer>();
         CharacterText = TextObject.GetComponent<TMP_Text>();
         
-        if(IsRoyalCharacter())
-            SetAngryMeter(50);
+        SetAngryMeter(50);
+        if (IsRoyalCharacter())
+            FaceMesh.material = MaterialNeutralFace;
 
         // TEST TEXT
         CharacterText.gameObject.GetComponent<MeshRenderer>().enabled = IsRoyalCharacter();
@@ -69,19 +83,6 @@ public class Character : MonoBehaviour
         if (!IsRoyalCharacter())
             return;
 
-        if(AngryMeter <= 25)
-        {
-            FaceMesh.material = MaterialAngryFace;
-        }
-        else if (AngryMeter <= 60)
-        {
-            FaceMesh.material = MaterialNeutralFace;
-            
-        }
-        else
-        {
-            FaceMesh.material = MaterialHappyFace;
-        }
         // TEST TEXT
         UpdateCharacterText();
     }
@@ -123,8 +124,51 @@ public class Character : MonoBehaviour
         }
     }
 
-    void AddReaction()
+    public void AddEmotionReaction(EEmotionType emotionReaction)
     {
+        AddAngryMeter(GetReactionMeter(emotionReaction));
+        if (!IsRoyalCharacter())
+            return;
+        switch (emotionReaction) 
+        {
+            case EEmotionType.Happy:
+                FaceMesh.material = MaterialHappyFace;
+                break;
+            case EEmotionType.Neutral:
+                FaceMesh.material = MaterialNeutralFace;
+                break;
+            case EEmotionType.Crying:
+                FaceMesh.material = MaterialCryingFace;
+                break;
+            case EEmotionType.Embarrassed:
+                FaceMesh.material = MaterialEmbarrassedFace;
+                break;
+            case EEmotionType.Angry:
+                FaceMesh.material = MaterialAngryFace;
+                break;
+            default:
+                break;
+        }
+    }
 
+    float GetReactionMeter(EEmotionType emotionReaction)
+    {
+        // Map this values somehow depending on Character and Day?
+        switch (emotionReaction)
+        {
+            case EEmotionType.Happy:
+                return 30;
+            case EEmotionType.Neutral:
+                return 0;
+            case EEmotionType.Embarrassed:
+                return -10;
+            case EEmotionType.Crying:
+                return -20;
+            case EEmotionType.Angry:
+                return -30;
+            default:
+                break;
+        }
+        return 0;
     }
 }
