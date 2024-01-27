@@ -379,6 +379,8 @@ MonoBehaviour:
   CharacterType: 0
   MaterialHappyFace: {fileID: 2100000, guid: f16e4b8fef64b2b43a8e908ecb99259b, type: 2}
   MaterialNeutralFace: {fileID: 2100000, guid: d9ea4a323461acc4aa34f369c72e3edf, type: 2}
+  MaterialCryingFace: {fileID: 2100000, guid: 1bb3e3e191bf8bf4ab80bab59db0b7ac, type: 2}
+  MaterialEmbarrassedFace: {fileID: 2100000, guid: 1f1aa86505685514185a534f4cc2c6e2, type: 2}
   MaterialAngryFace: {fileID: 2100000, guid: b096caea471f2d84583020297b1c6577, type: 2}
   FaceObject: {fileID: 1450482802153827842}
   TextObject: {fileID: 1873576007598385060}
