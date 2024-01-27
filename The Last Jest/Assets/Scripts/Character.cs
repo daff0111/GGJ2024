@@ -52,7 +52,6 @@ public class Character : MonoBehaviour
     public Material MaterialEmbarrassedFace;
     public Material MaterialAngryFace;
     [Header("Child Objects")]
-    public GameObject FaceObject;
     public GameObject TextObject;
 
     SkinnedMeshModifier headModifier;
