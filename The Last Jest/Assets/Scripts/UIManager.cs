@@ -9,61 +9,13 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
+    IconContainer iconContainer;
+
+    [SerializeField]
     JokeManager jokeManager;
 
     [SerializeField]
     Sprite sprite;
-    
-    private void Start()
-    {
-        subjectSelector.ClearOptions();
-        subjectSelector.AddOptions(
-            new List<TMP_Dropdown.OptionData>()
-            { 
-                new TMP_Dropdown.OptionData("King", sprite), 
-                new TMP_Dropdown.OptionData("Queen", sprite)
-            }
-        );
-
-        subjectSelector.onValueChanged.AddListener(delegate { SubjectSelected(subjectSelector); });
-
-        verbSelector.ClearOptions();
-        verbSelector.AddOptions(
-            new List<TMP_Dropdown.OptionData>()
-            {
-                new TMP_Dropdown.OptionData("Is", sprite),
-                new TMP_Dropdown.OptionData("Eats", sprite),
-                new TMP_Dropdown.OptionData("Farts", sprite),
-                new TMP_Dropdown.OptionData("Kills", sprite)
-            }
-        );
-
-        verbSelector.onValueChanged.AddListener(delegate { VerbSelected(verbSelector); });
-
-        objectSelector.ClearOptions();
-        objectSelector.AddOptions(
-            new List<TMP_Dropdown.OptionData>()
-            {
-                new TMP_Dropdown.OptionData("King", sprite),
-                new TMP_Dropdown.OptionData("Queen", sprite)
-            }
-        );
-
-        objectSelector.onValueChanged.AddListener(delegate { ObjectSelected(objectSelector); });
-
-        adjectiveSelector.ClearOptions();
-        adjectiveSelector.AddOptions(
-            new List<TMP_Dropdown.OptionData>()
-            {
-                new TMP_Dropdown.OptionData("Fat", sprite),
-                new TMP_Dropdown.OptionData("Ugly", sprite),
-                new TMP_Dropdown.OptionData("Poor", sprite),
-                new TMP_Dropdown.OptionData("Vain", sprite),
-            }
-        );
-
-        adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
-    }
 
     JokeManager.JokeStructure selectedStructure;
     [SerializeField]
@@ -80,6 +32,58 @@ public class UIManager : MonoBehaviour
     JokeManager.Adjective selectedAdjective;
     [SerializeField]
     Button submitButton;
+    
+    private void Start()
+    {
+        InitializeOptions(jokeManager.Level);
+    }
+
+    private void InitializeOptions(int level)
+    {
+        List<TMP_Dropdown.OptionData> subjectOptions = new List<TMP_Dropdown.OptionData>();
+        List<TMP_Dropdown.OptionData> objectOptions = new List<TMP_Dropdown.OptionData>();
+        foreach (var nounSpritePair in iconContainer.NounSprites)
+        {
+            if (nounSpritePair.UnlockLevel <= level)
+            {
+                subjectOptions.Add(new TMP_Dropdown.OptionData(nounSpritePair.Noun.ToString(), nounSpritePair.Sprite));
+                objectOptions.Add(new TMP_Dropdown.OptionData(nounSpritePair.Noun.ToString(), nounSpritePair.Sprite));
+            }
+        }
+        subjectSelector.ClearOptions();
+        subjectSelector.AddOptions(subjectOptions);
+
+        objectSelector.ClearOptions();
+        objectSelector.AddOptions(objectOptions);
+
+        subjectSelector.onValueChanged.AddListener(delegate { SubjectSelected(subjectSelector); });
+        objectSelector.onValueChanged.AddListener(delegate { ObjectSelected(objectSelector); });
+
+        List<TMP_Dropdown.OptionData> verbOptions = new List<TMP_Dropdown.OptionData>();
+        foreach (var verbSpritePair in iconContainer.VerbSprites)
+        {
+            if (verbSpritePair.UnlockLevel <= level)
+            {
+                verbOptions.Add(new TMP_Dropdown.OptionData(verbSpritePair.Verb.ToString(), verbSpritePair.Sprite));
+            }
+        }
+        verbSelector.ClearOptions();
+        verbSelector.AddOptions(verbOptions);
+        verbSelector.onValueChanged.AddListener(delegate { VerbSelected(verbSelector); });
+
+
+        List<TMP_Dropdown.OptionData> adjectiveOptions = new List<TMP_Dropdown.OptionData>();
+        foreach (var adjectiveSpritePair in iconContainer.AdjectiveSprites)
+        {
+            if (adjectiveSpritePair.UnlockLevel <= level)
+            {
+                adjectiveOptions.Add(new TMP_Dropdown.OptionData(adjectiveSpritePair.Adejctive.ToString(), adjectiveSpritePair.Sprite));
+            }
+        }
+        adjectiveSelector.ClearOptions();
+        adjectiveSelector.AddOptions(adjectiveOptions);
+        adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
+    }
 
     public void SubmitJoke()
     {
@@ -88,7 +92,6 @@ public class UIManager : MonoBehaviour
         else
             jokeManager.SubmitJoke(selectedSubject, selectedAdjective);
     }
-
 
     void SubjectSelected(TMP_Dropdown subjectSelector)
     {

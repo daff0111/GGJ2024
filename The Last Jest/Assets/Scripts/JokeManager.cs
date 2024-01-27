@@ -24,23 +24,34 @@ public class JokeManager : MonoBehaviour
     public enum Noun
     {
         King,
+        Executioner,
+        Heir,
+        Audience,
+        Jester,
         Queen,
+        Pig,
+        Food,
     }
 
     public enum Verb
     {
         Is,
-        Eats,
         Farts,
+        Loves,
+        Hates,
         Kills,
+        Serves,
     }
 
     public enum Adjective
     {
-        Fat,
         Ugly,
+        Funny,
+        Fat,
         Poor,
-        Vain,
+        Stupid,
+        Small,
+        Big,
 
     }
 
@@ -52,6 +63,7 @@ public class JokeManager : MonoBehaviour
 
     protected int JokeCount = 0;
     protected bool GameOver = false;
+    public int Level = 0;
 
     // Start is called before the first frame update
     void Start()

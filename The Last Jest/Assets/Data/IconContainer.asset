@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd476539b173ff4a9189e9b239f7391, type: 3}
+  m_Name: IconContainer
+  m_EditorClassIdentifier: 
+  NounSprites:
+  - Noun: 0
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Noun: 5
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Noun: 2
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Noun: 1
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Noun: 7
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Noun: 6
+    Sprite: {fileID: 0}
+    UnlockLevel: 2
+  VerbSprites:
+  - Verb: 0
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Verb: 1
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Verb: 2
+    Sprite: {fileID: 0}
+    UnlockLevel: 1
+  - Verb: 3
+    Sprite: {fileID: 0}
+    UnlockLevel: 1
+  - Verb: 4
+    Sprite: {fileID: 0}
+    UnlockLevel: 2
+  - Verb: 5
+    Sprite: {fileID: 0}
+    UnlockLevel: 2
+  AdjectiveSprites:
+  - Adejctive: 0
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Adejctive: 1
+    Sprite: {fileID: 0}
+    UnlockLevel: 0
+  - Adejctive: 2
+    Sprite: {fileID: 0}
+    UnlockLevel: 1
+  - Adejctive: 3
+    Sprite: {fileID: 0}
+    UnlockLevel: 1
+  - Adejctive: 4
+    Sprite: {fileID: 0}
+    UnlockLevel: 1
+  - Adejctive: 5
+    Sprite: {fileID: 0}
+    UnlockLevel: 2
+  - Adejctive: 6
+    Sprite: {fileID: 0}
+    UnlockLevel: 2
