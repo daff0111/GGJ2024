@@ -57,7 +57,6 @@ public class Character : MonoBehaviour
     SkinnedMeshModifier headModifier;
 
     protected float AngryMeter = 50;
-
     protected CharacterMultiplier Multipliers;
 
     // TEST TEXT
@@ -82,7 +81,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public float GetAngryMeter()
@@ -94,7 +93,10 @@ public class Character : MonoBehaviour
     { 
         AngryMeter = newValue;
 
-        headModifier.SetSliderValue((((StartingAngryMeter - newValue)/StartingAngryMeter)*180)-50); //Magic number to match Happyness on the face
+        if (headModifier)
+        {
+            headModifier.SetSliderValue((((StartingAngryMeter - newValue) / StartingAngryMeter) * 180) - 50); //Magic number to match Happyness on the face
+        }
 
         if (!IsRoyalCharacter())
             return;
@@ -173,15 +175,15 @@ public class Character : MonoBehaviour
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
-                return 5 * Multipliers.HappyMultiplier;
+                return 10 * Multipliers.HappyMultiplier;
             case EEmotionType.Neutral:
                 return 0;
             case EEmotionType.Embarrassed:
-                return -5 * Multipliers.EmbarrassedMultiplier;
+                return -10 * Multipliers.EmbarrassedMultiplier;
             case EEmotionType.Crying:
-                return -5 * Multipliers.CryingMultiplier;
+                return -10 * Multipliers.CryingMultiplier;
             case EEmotionType.Angry:
-                return -5 * Multipliers.AngryMultiplier;
+                return -10 * Multipliers.AngryMultiplier;
             default:
                 break;
         }

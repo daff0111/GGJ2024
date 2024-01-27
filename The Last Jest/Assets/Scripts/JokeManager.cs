@@ -99,6 +99,8 @@ public class JokeManager : MonoBehaviour
     {
         JokeCount++;
         
+        Executioner.PrepareKill(King.GetAngryMeter() <= 20 || Executioner.GetAngryMeter() <= 15);
+
         if (Heir.GetAngryMeter() <= 0)
         {
             // Heir is Angry, King gets angry too

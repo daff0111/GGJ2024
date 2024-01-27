@@ -536,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8592874230459743236, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_Name
-      value: Jester
+      value: Jester2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1666,11 +1666,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2516264024570581660, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.75
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 2516264024570581660, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516264024570581660, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1708,30 +1708,6 @@ PrefabInstance:
       propertyPath: Jester
       value: 
       objectReference: {fileID: 120910667}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.475
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9961947
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.08715578
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047242779400941531, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -10
-      objectReference: {fileID: 0}
     - target: {fileID: 8262023083105222044, guid: 94b1b1b96428c394fa843c44c31c3fce, type: 3}
       propertyPath: m_Name
       value: Executioner
