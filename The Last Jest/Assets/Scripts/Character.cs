@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
         None = 0,
         King,
         Queen,
-        Princess,
+        Heir,
         Jester,
         Executioner
     };
@@ -34,6 +34,7 @@ public class Character : MonoBehaviour
     };
 
     public ECharacterType CharacterType;
+    public float StartingAngryMeter = 50;
     [Header("Emotion Materials")]
     public Material MaterialHappyFace;
     public Material MaterialNeutralFace;
@@ -56,7 +57,7 @@ public class Character : MonoBehaviour
         FaceMesh = FaceObject.GetComponent<MeshRenderer>();
         CharacterText = TextObject.GetComponent<TMP_Text>();
         
-        SetAngryMeter(50);
+        SetAngryMeter(StartingAngryMeter);
         if (IsRoyalCharacter())
             FaceMesh.material = MaterialNeutralFace;
 

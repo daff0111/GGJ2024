@@ -7,14 +7,6 @@ using static JokeManager;
 
 public class JokeManager : MonoBehaviour
 {
-    public enum EJokeType
-    {
-        A,
-        B,
-        C,
-        D
-    };
-
     public enum JokeStructure
     {
         SubjectVerbObject,
@@ -58,7 +50,7 @@ public class JokeManager : MonoBehaviour
     public JesterCharacter Jester;
     public Character King;
     public Character Queen;
-    public Character Princess;
+    public Character Heir;
     public ExecutionerCharacter Executioner;
 
     protected int JokeCount = 0;
@@ -85,73 +77,15 @@ public class JokeManager : MonoBehaviour
             }
             return;
         }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            TellJoke(EJokeType.A);
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            TellJoke(EJokeType.B);
-        }
-
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            TellJoke(EJokeType.C);
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            TellJoke(EJokeType.D);
-        }
     }
 
-    void TellJoke(EJokeType joke)
+    void TellJoke()
     {
         JokeCount++;
-        Debug.Log("Joke "+ joke.ToString() + " Told");
-        switch (joke) 
-        {
-            case EJokeType.A:
-                Debug.Log("The Queen likes to slap the Executioner");
-                King.AddEmotionReaction(EEmotionType.Happy);
-                Queen.AddEmotionReaction(EEmotionType.Angry);
-                Princess.AddEmotionReaction(EEmotionType.Angry);
-                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
-                //Public.AddReaction
-                break;
-            case EJokeType.B:
-                Debug.Log("The King has a big butt");
-                King.AddEmotionReaction(EEmotionType.Angry);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Princess.AddEmotionReaction(EEmotionType.Neutral);
-                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
-                //Public.AddReaction
-                break;
-            case EJokeType.C:
-                Debug.Log("The Princess calls the king Poopface");
-                King.AddEmotionReaction(EEmotionType.Embarrassed);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Princess.AddEmotionReaction(EEmotionType.Angry);
-                Executioner.AddEmotionReaction(EEmotionType.Happy);
-                //Public.AddReaction
-                break;
-            case EJokeType.D:
-                Debug.Log("The Princess is a spoiled Bratt");
-                King.AddEmotionReaction(EEmotionType.Happy);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Princess.AddEmotionReaction(EEmotionType.Crying);
-                Executioner.AddEmotionReaction(EEmotionType.Neutral);
-                //Public.AddReaction
-                break;
-            default:
-                break;
-        }
         
-        if (Princess.GetAngryMeter() <= 0)
+        if (Heir.GetAngryMeter() <= 0)
         {
-            // Princess is Angry, King gets angry too
+            // Heir is Angry, King gets angry too
             King.AddAngryMeter(-30);
         }
 
@@ -178,11 +112,106 @@ public class JokeManager : MonoBehaviour
     public void SubmitJoke(Noun subject, Verb verb, Noun jokeObject)
     {
         Debug.LogFormat("{0} {1} {2}", subject.ToString(), verb.ToString(), jokeObject.ToString());
+        if (GameOver)
+        {
+            return;
+        }
+
+        switch (subject)
+        {
+            case Noun.Queen:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Crying);
+                Heir.AddEmotionReaction(EEmotionType.Angry);
+                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                //Audience.AddReaction
+                break;
+            case Noun.King:
+                King.AddEmotionReaction(EEmotionType.Angry);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Neutral);
+                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                //Audience.AddReaction
+                break;
+            case Noun.Audience:
+                King.AddEmotionReaction(EEmotionType.Embarrassed);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Angry);
+                Executioner.AddEmotionReaction(EEmotionType.Happy);
+                //Audience.AddReaction
+                break;
+            case Noun.Heir:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Embarrassed);
+                Heir.AddEmotionReaction(EEmotionType.Crying);
+                Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                //Audience.AddReaction
+                break;
+            case Noun.Executioner:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Neutral);
+                Executioner.AddEmotionReaction(EEmotionType.Angry);
+                //Audience.AddReaction
+                break;
+            case Noun.Food:
+                King.AddEmotionReaction(EEmotionType.Embarrassed);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Neutral);
+                Executioner.AddEmotionReaction(EEmotionType.Happy);
+                //Audience.AddReaction
+                break;
+            default:
+                break;
+        }
+
+        TellJoke();
     }
 
     public void SubmitJoke(Noun subject, Adjective adjective)
     {
         Debug.LogFormat("{0} is {1}", subject.ToString(), adjective.ToString());
+        switch (subject)
+        {
+            case Noun.Queen:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Angry);
+                Heir.AddEmotionReaction(EEmotionType.Happy);
+                Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                //Audience.AddReaction
+                break;
+            case Noun.King:
+                King.AddEmotionReaction(EEmotionType.Angry);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Happy);
+                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                //Audience.AddReaction
+                break;
+            case Noun.Audience:
+                King.AddEmotionReaction(EEmotionType.Embarrassed);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Happy);
+                Executioner.AddEmotionReaction(EEmotionType.Happy);
+                //Audience.AddReaction
+                break;
+            case Noun.Heir:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Crying);
+                Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                //Audience.AddReaction
+                break;
+            case Noun.Executioner:
+                King.AddEmotionReaction(EEmotionType.Happy);
+                Queen.AddEmotionReaction(EEmotionType.Happy);
+                Heir.AddEmotionReaction(EEmotionType.Crying);
+                Executioner.AddEmotionReaction(EEmotionType.Angry);
+                //Audience.AddReaction
+                break;
+            default:
+                break;
+        }
+        TellJoke();
     }
 
     void EndGame()

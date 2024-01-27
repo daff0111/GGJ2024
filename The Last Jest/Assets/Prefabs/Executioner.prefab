@@ -331,8 +331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterType: 5
+  StartingAngryMeter: 70
   MaterialHappyFace: {fileID: 2100000, guid: f16e4b8fef64b2b43a8e908ecb99259b, type: 2}
   MaterialNeutralFace: {fileID: 2100000, guid: d9ea4a323461acc4aa34f369c72e3edf, type: 2}
+  MaterialCryingFace: {fileID: 0}
+  MaterialEmbarrassedFace: {fileID: 0}
   MaterialAngryFace: {fileID: 2100000, guid: b096caea471f2d84583020297b1c6577, type: 2}
   FaceObject: {fileID: 6431335078934430923}
   TextObject: {fileID: 6296542668764532077}
