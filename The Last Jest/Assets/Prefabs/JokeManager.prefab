@@ -47,3 +47,85 @@ MonoBehaviour:
   Jester: {fileID: 0}
   King: {fileID: 0}
   Queen: {fileID: 0}
+  Heir: {fileID: 0}
+  Executioner: {fileID: 0}
+  Audience: {fileID: 0}
+  Level: 1
+  Level1MultiplierSet:
+    KingMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 2
+      CryingMultiplier: 1
+      AngryMultiplier: 1
+    QueenMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 1
+      AngryMultiplier: 2
+    HeirMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+    AudienceMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 1
+      AngryMultiplier: 1
+    ExecutionerMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+  Level2MultiplierSet:
+    KingMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 3
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+    QueenMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 3
+    HeirMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+    AudienceMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 1
+      AngryMultiplier: 1
+    ExecutionerMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+  Level3MultiplierSet:
+    KingMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 3
+      CryingMultiplier: 2
+      AngryMultiplier: 2
+    QueenMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 2
+      AngryMultiplier: 3
+    HeirMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 2
+      CryingMultiplier: 2
+      AngryMultiplier: 1
+    AudienceMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 1
+      CryingMultiplier: 1
+      AngryMultiplier: 1
+    ExecutionerMultiplier:
+      HappyMultiplier: 1
+      EmbarrassedMultiplier: 2
+      CryingMultiplier: 2
+      AngryMultiplier: 1
