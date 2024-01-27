@@ -222,6 +222,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1542681125428726659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_text
+      value: Executioner
+      objectReference: {fileID: 0}
     - target: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Name
       value: Executioner
