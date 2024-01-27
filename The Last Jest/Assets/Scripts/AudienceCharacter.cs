@@ -12,10 +12,10 @@ public class AudienceCharacter : Character
         base.Start();
     }
 
-    public override void AddEmotionReaction(EEmotionType emotionReaction)
+    public override void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
         Debug.Log("Audience " + emotionReaction.ToString());
-        AddAngryMeter(GetReactionMeter(emotionReaction));
+        AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
@@ -38,7 +38,7 @@ public class AudienceCharacter : Character
         }
         foreach (Character aCharacter in audienceCharacters)
         {
-            aCharacter.AddEmotionReaction(emotionReaction);
+            aCharacter.AddEmotionReaction(emotionReaction, multiplier);
         }
     }
 }
