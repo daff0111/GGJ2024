@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        Screen.SetResolution(1920, 1080, true);
     }
     public void BeginGame()
     {

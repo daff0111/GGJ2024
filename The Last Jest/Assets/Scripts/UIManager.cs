@@ -37,6 +37,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     TMP_Text ShowHideText;
 
+    [SerializeField]
+    Image SubjectImage;
+
+    [SerializeField]
+    Image VerbImage;
+
+    [SerializeField]
+    Image ComplementImage;
+
 
     private void Start()
     {
@@ -107,6 +116,8 @@ public class UIManager : MonoBehaviour
     void SubjectSelected(TMP_Dropdown subjectSelector)
     {
         selectedSubject = (JokeManager.Noun)Enum.Parse( typeof(JokeManager.Noun), subjectSelector.options[subjectSelector.value].text);
+
+        SubjectImage.sprite = subjectSelector.options[subjectSelector.value].image;
     }
     void VerbSelected(TMP_Dropdown verbSelector)
     {
@@ -115,16 +126,22 @@ public class UIManager : MonoBehaviour
             selectedStructure = JokeManager.JokeStructure.SubjectIsAdjective;
         else
             selectedStructure = JokeManager.JokeStructure.SubjectVerbObject;
+
+        VerbImage.sprite = verbSelector.options[verbSelector.value].image;
     }
 
     void ObjectSelected(TMP_Dropdown objectSelector)
     {
         selectedObject = (JokeManager.Noun)Enum.Parse(typeof(JokeManager.Noun), objectSelector.options[objectSelector.value].text);
+
+        ComplementImage.sprite = objectSelector.options[objectSelector.value].image;
     }
 
     void AdjectiveSelected(TMP_Dropdown adjectiveSelector)
     {
         selectedAdjective = (JokeManager.Adjective)Enum.Parse(typeof(JokeManager.Adjective), adjectiveSelector.options[adjectiveSelector.value].text);
+
+        ComplementImage.sprite = adjectiveSelector.options[adjectiveSelector.value].image;
     }
 
     public void ToggleVisibility()

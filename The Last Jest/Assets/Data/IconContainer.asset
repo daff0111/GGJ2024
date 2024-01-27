@@ -33,10 +33,10 @@ MonoBehaviour:
     UnlockLevel: 2
   VerbSprites:
   - Verb: 0
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 119ae800450bd3c4fa8860ef58e4cc44, type: 3}
     UnlockLevel: 0
   - Verb: 1
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: db480573b57653c46bfeb3bdba4abadc, type: 3}
     UnlockLevel: 0
   - Verb: 2
     Sprite: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
     Sprite: {fileID: 0}
     UnlockLevel: 1
   - Verb: 4
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 89a75bb1adb904d45881271a72d5f275, type: 3}
     UnlockLevel: 2
   - Verb: 5
     Sprite: {fileID: 0}
