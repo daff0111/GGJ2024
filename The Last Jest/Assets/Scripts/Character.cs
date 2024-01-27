@@ -57,8 +57,13 @@ public class Character : MonoBehaviour
     SkinnedMeshModifier headModifier;
 
     protected float AngryMeter = 50;
-
     protected CharacterMultiplier Multipliers;
+
+    // Movement Test
+    protected float TimeLoop = 0f;
+    protected float Direction = 1;
+    protected int NewDirection = 1;
+    protected bool IsAlive = true;
 
     // TEST TEXT
     protected TMP_Text CharacterText;
@@ -71,6 +76,7 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        TimeLoop = UnityEngine.Random.Range(0, 0.2f);
         CharacterText = TextObject.GetComponent<TMP_Text>();
         SetAngryMeter(StartingAngryMeter);
 
@@ -82,7 +88,17 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (CharacterType == ECharacterType.Executioner || !IsAlive)
+            return;
+
+        if (TimeLoop >= 0.2f)
+        {
+            TimeLoop = 0;
+            NewDirection *= -1;
+        }
+        Direction = Mathf.Lerp(Direction, NewDirection, 0.1f);
+        TimeLoop += Time.deltaTime;
+        transform.position += new Vector3(0, AngryMeter * 0.01f * Time.deltaTime * Direction, 0);
     }
 
     public float GetAngryMeter()

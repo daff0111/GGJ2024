@@ -9,9 +9,17 @@ public class ExecutionerCharacter : Character
 
     public void KillJester()
     {
-        ExecutionerAxe.transform.rotation = Quaternion.Euler(0, 0, -90);
-        ExecutionerAxe.transform.localPosition = new Vector3(1.5f, 0.5f, 0);
+        ExecutionerAxe.transform.rotation = Quaternion.Euler(0, 0, -80);
+        ExecutionerAxe.transform.localPosition = new Vector3(-0.1f, 0.6f, -0.475f);
         Jester.DropHead();
+    }
+
+    public void PrepareKill(bool prepare)
+    {
+        if(prepare)
+            ExecutionerAxe.transform.localRotation = Quaternion.Euler(0, 0, 40);
+        else
+            ExecutionerAxe.transform.localRotation = Quaternion.Euler(0, 0, -10);
     }
 
     public void RevealAngryFace()
