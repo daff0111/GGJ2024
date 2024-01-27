@@ -344,7 +344,7 @@ public class JokeManager : MonoBehaviour
                 {
                     characterSubject.AddEmotionReaction(EEmotionType.Neutral);
                     if (characterObject != null)
-                        characterObject.AddEmotionReaction(EEmotionType.Sad, 2);
+                        characterObject.AddEmotionReaction(EEmotionType.Crying, 2);
 
                     Audience.AddEmotionReaction(EEmotionType.Neutral);
                     // King is not ammused
@@ -384,7 +384,7 @@ public class JokeManager : MonoBehaviour
                 {
                     if (jokeObject == Noun.Pig)
                     {
-                        characterSubject.AddEmotionReaction(EEmotionType.Embarrassd, 1);
+                        characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 1);
                         Audience.AddEmotionReaction(EEmotionType.Happy, 1);
                         if (characterSubject != King)
                             King.AddEmotionReaction(EEmotionType.Happy);
