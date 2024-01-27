@@ -57,9 +57,18 @@ public class Character : MonoBehaviour
         
     }
 
+    public float GetAngryMeter()
+    { 
+        return AngryMeter; 
+    }
+
     void SetAngryMeter(float newValue)
     { 
         AngryMeter = newValue;
+
+        if (!IsRoyalCharacter())
+            return;
+
         if(AngryMeter <= 25)
         {
             FaceMesh.material = MaterialAngryFace;
@@ -112,5 +121,10 @@ public class Character : MonoBehaviour
         {
             CharacterText.color = new Color(0, 255, 0, 255);
         }
+    }
+
+    void AddReaction()
+    {
+
     }
 }

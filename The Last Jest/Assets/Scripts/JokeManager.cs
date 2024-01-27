@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class JokeManager : MonoBehaviour
 {
-    public Character Jester;
+    public enum EJokeType
+    {
+        A,
+        B,
+        C
+    };
+
+    public JesterCharacter Jester;
     public Character King;
     public Character Queen;
+    public Character Princess;
+    public ExecutionerCharacter Executioner;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +28,67 @@ public class JokeManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("Joke A Told");
-            King.AddAngryMeter(20);
-            Queen.AddAngryMeter(-20);
+            TellJoke(EJokeType.A);
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-            Debug.Log("Joke B Told");
-            King.AddAngryMeter(-40);
-            Queen.AddAngryMeter(20);
+            TellJoke(EJokeType.B);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            TellJoke(EJokeType.C);
+        }
+    }
+
+    void TellJoke(EJokeType joke)
+    {
+        Debug.Log("Joke "+ joke.ToString() + " Told");
+        switch (joke) 
+        {
+            case EJokeType.A:
+                
+                King.AddAngryMeter(20);
+                Queen.AddAngryMeter(-20);
+                Executioner.AddAngryMeter(-20);
+                break;
+            case EJokeType.B:
+                King.AddAngryMeter(-40);
+                Queen.AddAngryMeter(20);
+                Princess.AddAngryMeter(20);
+                break;
+            case EJokeType.C:
+                King.AddAngryMeter(-30);
+                Queen.AddAngryMeter(10);
+                Princess.AddAngryMeter(-20);
+                Executioner.AddAngryMeter(20);
+                break;
+            default:
+                break;
+        }
+        
+        if (Princess.GetAngryMeter() <= 0)
+        {
+            // Princess is Angry, King gets angry too
+            King.AddAngryMeter(-30);
+        }
+
+        if (King.GetAngryMeter() <= 0) 
+        {
+            // You Died - King Orders your death
+            Executioner.KillJester();
+        }
+
+        if (Executioner.GetAngryMeter() <= 0)
+        {
+            // You Died - The Executioner is angry and he kills you
+            Executioner.KillJester();
+        }
+
+        if(Queen.GetAngryMeter() <= 0)
+        {
+            // Queen is Angry - nex day she'll be in the executioner place
         }
     }
 }
