@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static JokeManager;
 
 public class JokeManager : MonoBehaviour
 {
@@ -10,6 +12,35 @@ public class JokeManager : MonoBehaviour
         B,
         C
     };
+
+    public enum JokeStructure
+    {
+        SubjectVerbObject,
+        SubjectIsAdjective,
+    }
+
+    public enum Noun
+    {
+        King,
+        Queen,
+    }
+
+    public enum Verb
+    {
+        Is,
+        Eats,
+        Farts,
+        Kills,
+    }
+
+    public enum Adjective
+    {
+        Fat,
+        Ugly,
+        Poor,
+        Vain,
+
+    }
 
     public JesterCharacter Jester;
     public Character King;
@@ -90,5 +121,15 @@ public class JokeManager : MonoBehaviour
         {
             // Queen is Angry - nex day she'll be in the executioner place
         }
+    }
+
+    public void SubmitJoke(Noun subject, Verb verb, Noun jokeObject)
+    {
+        Debug.LogFormat("{0} {1} {2}", subject.ToString(), verb.ToString(), jokeObject.ToString());
+    }
+
+    public void SubmitJoke(Noun subject, Adjective adjective)
+    {
+        Debug.LogFormat("{0} is {1}", subject.ToString(), adjective.ToString());
     }
 }
