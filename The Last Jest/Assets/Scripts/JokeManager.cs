@@ -76,6 +76,7 @@ public class JokeManager : MonoBehaviour
     {
         JokeCount = 0;
         GameOver = false;
+        StartLevel(1);
     }
 
     // Update is called once per frame
@@ -139,6 +140,16 @@ public class JokeManager : MonoBehaviour
         switch (Level)
         {
             case 1:
+                if(verb == Verb.Farts)
+                {
+                    GetCharacterWithNoun(subject).AddEmotionReaction(EEmotionType.Happy, 3);
+                    if(GetCharacterWithNoun(jokeObject) != null)
+                        GetCharacterWithNoun(jokeObject).AddEmotionReaction(EEmotionType.Embarrassed, 3);
+                }
+                if (verb == Verb.Is)
+                {
+
+                }
                 break;
             case 2:
                 break;
@@ -218,5 +229,55 @@ public class JokeManager : MonoBehaviour
         Executioner.KillJester();
         GameOver = true;
         Debug.Log("YOU DIED - You told " + JokeCount + " Jokes. Press 'R' to Restart");
+    }
+    void StartLevel(int level)
+    {
+        Level = level;
+        //Set Multipliers
+        switch (Level)
+        {
+            case 1:
+                SetMultipliersForCharacters(Level1MultiplierSet);
+                break;
+            case 2:
+                SetMultipliersForCharacters(Level2MultiplierSet);
+                break;
+            case 3:
+                SetMultipliersForCharacters(Level3MultiplierSet);
+                break;
+            default:
+                break;
+        }
+    }
+
+    void SetMultipliersForCharacters(CharacterMultipliersSet multiplierSet)
+    {
+        King.SetMultipliers(multiplierSet.KingMultiplier);
+        Queen.SetMultipliers(multiplierSet.QueenMultiplier);
+        Heir.SetMultipliers(multiplierSet.HeirMultiplier);
+        Audience.SetMultipliers(multiplierSet.AudienceMultiplier);
+        Executioner.SetMultipliers(multiplierSet.ExecutionerMultiplier);
+    }
+
+    Character GetCharacterWithNoun(Noun characterNoun)
+    {
+        switch (characterNoun)
+        {
+            case Noun.Queen:
+                return Queen;
+            case Noun.King:
+                return King;
+            case Noun.Audience:
+                return Audience;
+            case Noun.Heir:
+                return Heir;
+            case Noun.Executioner:
+                return Executioner;
+            case Noun.Jester: 
+                return Jester;
+            default:
+                break;
+        }
+        return null;
     }
 }
