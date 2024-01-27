@@ -18,7 +18,6 @@ public class AudienceCharacter : Character
 
     public override void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
-        Debug.Log("Audience " + emotionReaction.ToString());
         AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
         switch (emotionReaction)
         {
