@@ -135,9 +135,9 @@ public class Character : MonoBehaviour
         }
     }
 
-    public virtual void AddEmotionReaction(EEmotionType emotionReaction)
+    public virtual void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
-        AddAngryMeter(GetReactionMeter(emotionReaction));
+        AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
         if (!IsRoyalCharacter())
             return;
         switch (emotionReaction) 
