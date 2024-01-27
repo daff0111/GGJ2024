@@ -8,6 +8,7 @@ public class JesterCharacter : Character
 
     public void DropHead()
     {
+        Head.gameObject.GetComponent<Collider>().enabled = true;
         Head.useGravity = true;
         Head.AddForce(transform.right * 100);
     }

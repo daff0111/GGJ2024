@@ -52,6 +52,7 @@ public class JokeManager : MonoBehaviour
     public Character Queen;
     public Character Heir;
     public ExecutionerCharacter Executioner;
+    public AudienceCharacter Audience;
 
     protected int JokeCount = 0;
     protected bool GameOver = false;
@@ -124,42 +125,42 @@ public class JokeManager : MonoBehaviour
                 Queen.AddEmotionReaction(EEmotionType.Crying);
                 Heir.AddEmotionReaction(EEmotionType.Angry);
                 Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Happy);
                 break;
             case Noun.King:
                 King.AddEmotionReaction(EEmotionType.Angry);
                 Queen.AddEmotionReaction(EEmotionType.Happy);
                 Heir.AddEmotionReaction(EEmotionType.Neutral);
                 Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Happy);
                 break;
             case Noun.Audience:
                 King.AddEmotionReaction(EEmotionType.Embarrassed);
                 Queen.AddEmotionReaction(EEmotionType.Happy);
                 Heir.AddEmotionReaction(EEmotionType.Angry);
                 Executioner.AddEmotionReaction(EEmotionType.Happy);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Angry);
                 break;
             case Noun.Heir:
                 King.AddEmotionReaction(EEmotionType.Happy);
                 Queen.AddEmotionReaction(EEmotionType.Embarrassed);
                 Heir.AddEmotionReaction(EEmotionType.Crying);
                 Executioner.AddEmotionReaction(EEmotionType.Neutral);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Happy);
                 break;
             case Noun.Executioner:
                 King.AddEmotionReaction(EEmotionType.Happy);
                 Queen.AddEmotionReaction(EEmotionType.Happy);
                 Heir.AddEmotionReaction(EEmotionType.Neutral);
                 Executioner.AddEmotionReaction(EEmotionType.Angry);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Happy);
                 break;
             case Noun.Food:
                 King.AddEmotionReaction(EEmotionType.Embarrassed);
                 Queen.AddEmotionReaction(EEmotionType.Happy);
                 Heir.AddEmotionReaction(EEmotionType.Neutral);
                 Executioner.AddEmotionReaction(EEmotionType.Happy);
-                //Audience.AddReaction
+                Audience.AddEmotionReaction(EEmotionType.Embarrassed);
                 break;
             default:
                 break;
@@ -170,7 +171,18 @@ public class JokeManager : MonoBehaviour
 
     public void SubmitJoke(Noun subject, Adjective adjective)
     {
-        Debug.LogFormat("{0} is {1}", subject.ToString(), adjective.ToString());
+        Debug.LogFormat("{0} blah {1}", subject.ToString(), adjective.ToString());
+        switch(Level)
+        {
+            case 1:
+                break;
+            case 2:
+                break; 
+            case 3:
+                break;
+            default: 
+                break;
+        }
         switch (subject)
         {
             case Noun.Queen:
