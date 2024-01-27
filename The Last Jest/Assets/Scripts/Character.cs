@@ -175,15 +175,15 @@ public class Character : MonoBehaviour
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
-                return 5 * Multipliers.HappyMultiplier;
+                return 10 * Multipliers.HappyMultiplier;
             case EEmotionType.Neutral:
                 return 0;
             case EEmotionType.Embarrassed:
-                return -5 * Multipliers.EmbarrassedMultiplier;
+                return -10 * Multipliers.EmbarrassedMultiplier;
             case EEmotionType.Crying:
-                return -5 * Multipliers.CryingMultiplier;
+                return -10 * Multipliers.CryingMultiplier;
             case EEmotionType.Angry:
-                return -5 * Multipliers.AngryMultiplier;
+                return -10 * Multipliers.AngryMultiplier;
             default:
                 break;
         }
