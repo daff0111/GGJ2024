@@ -137,13 +137,14 @@ public class JokeManager : MonoBehaviour
         }
         Debug.LogFormat("{0} {1} {2}", subject.ToString(), verb.ToString(), jokeObject.ToString());
 
+        Character characterSubject = GetCharacterWithNoun(subject);
+        Character characterObject = GetCharacterWithNoun(jokeObject);
+
         switch (Level)
         {
             case 1:
                 if(verb == Verb.Farts)
                 {
-                    Character characterSubject = GetCharacterWithNoun(subject);
-                    Character characterObject = GetCharacterWithNoun(jokeObject);
                     characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
                     if(characterObject != null)
                         characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 3);
@@ -167,8 +168,16 @@ public class JokeManager : MonoBehaviour
                 {
                     if(jokeObject == Noun.Pig)
                     {
-                        GetCharacterWithNoun(subject).AddEmotionReaction(EEmotionType.Angry, 3);
+                        characterSubject.AddEmotionReaction(EEmotionType.Angry, 3);
                         Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                        if (characterSubject != King)
+                            King.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Queen)
+                            Queen.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Heir)
+                            Heir.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Executioner)
+                            Executioner.AddEmotionReaction(EEmotionType.Happy);
                     }
                     else
                     {
@@ -182,8 +191,220 @@ public class JokeManager : MonoBehaviour
                 }
                 break;
             case 2:
+                if (verb == Verb.Farts)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 3);
+
+                    // Audience laughs at Fart
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                    // King likes farts
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Happy);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner likes farts
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Happy);
+                }
+                if (verb == Verb.Hates)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 1);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Angry, 1);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Loves)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Neutral);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 2);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Is)
+                {
+                    if (jokeObject == Noun.Pig)
+                    {
+                        characterSubject.AddEmotionReaction(EEmotionType.Angry, 3);
+                        Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                        if (characterSubject != King)
+                            King.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Queen)
+                            Queen.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Heir)
+                            Heir.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Executioner)
+                            Executioner.AddEmotionReaction(EEmotionType.Happy);
+                    }
+                    else
+                    {
+                        // Bad Joke
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                        Audience.AddEmotionReaction(EEmotionType.Angry, 2);
+                    }
+                }
                 break;
             case 3:
+                if (verb == Verb.Farts)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 3);
+
+                    // Audience laughs at Fart
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                    // King likes farts
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Happy);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner likes farts
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Happy);
+                }
+                if (verb == Verb.Hates)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 1);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Angry, 1);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Loves)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Neutral);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 2);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Kills)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Neutral);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Sad, 2);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is embarrassed
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                }
+                if (verb == Verb.Serves)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 3);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Neutral);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Is)
+                {
+                    if (jokeObject == Noun.Pig)
+                    {
+                        characterSubject.AddEmotionReaction(EEmotionType.Embarrassd, 1);
+                        Audience.AddEmotionReaction(EEmotionType.Happy, 1);
+                        if (characterSubject != King)
+                            King.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Queen)
+                            Queen.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Heir)
+                            Heir.AddEmotionReaction(EEmotionType.Happy);
+                        if (characterSubject != Executioner)
+                            Executioner.AddEmotionReaction(EEmotionType.Happy);
+                    }
+                    else
+                    {
+                        // Bad Joke
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                        Audience.AddEmotionReaction(EEmotionType.Angry, 3);
+                    }
+                }
                 break;
             default:
                 break;
@@ -199,11 +420,10 @@ public class JokeManager : MonoBehaviour
             return;
         }
         Debug.LogFormat("{0} is {1}", subject.ToString(), adjective.ToString());
-
-        switch(Level)
+        Character characterSubject = GetCharacterWithNoun(subject);
+        switch (Level)
         {
             case 1:
-                Character characterSubject = GetCharacterWithNoun(subject);
                 if (adjective == Adjective.Ugly)
                 {
                     characterSubject.AddEmotionReaction(EEmotionType.Angry, 2);
@@ -212,7 +432,7 @@ public class JokeManager : MonoBehaviour
                 if (adjective == Adjective.Funny)
                 {
                     characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
-                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 1);
                 }
                 // King is not ammused
                 if (characterSubject != King)
@@ -228,52 +448,97 @@ public class JokeManager : MonoBehaviour
                     Executioner.AddEmotionReaction(EEmotionType.Neutral);
                 break;
             case 2:
+                if (adjective == Adjective.Ugly)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Angry, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                }
+                if (adjective == Adjective.Funny)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Fat)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Poor)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 1);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Stupid)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                // King is not ammused
+                if (characterSubject != King)
+                    King.AddEmotionReaction(EEmotionType.Neutral);
+                // Queen is not ammused
+                if (characterSubject != Queen)
+                    Queen.AddEmotionReaction(EEmotionType.Neutral);
+                // Heir is not ammused
+                if (characterSubject != Heir)
+                    Heir.AddEmotionReaction(EEmotionType.Neutral);
+                // Executioner is not ammused
+                if (characterSubject != Executioner)
+                    Executioner.AddEmotionReaction(EEmotionType.Neutral);
                 break; 
             case 3:
+                if (adjective == Adjective.Ugly)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Angry, 3);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 3);
+                }
+                if (adjective == Adjective.Funny)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Happy, 3);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 1);
+                }
+                if (adjective == Adjective.Fat)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Poor)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 1);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Stupid)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Crying, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Small)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 3);
+                    Audience.AddEmotionReaction(EEmotionType.Happy, 2);
+                }
+                if (adjective == Adjective.Big)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Happy, 2);
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                // King is not ammused
+                if (characterSubject != King)
+                    King.AddEmotionReaction(EEmotionType.Neutral);
+                // Queen is not ammused
+                if (characterSubject != Queen)
+                    Queen.AddEmotionReaction(EEmotionType.Neutral);
+                // Heir is not ammused
+                if (characterSubject != Heir)
+                    Heir.AddEmotionReaction(EEmotionType.Neutral);
+                // Executioner is not ammused
+                if (characterSubject != Executioner)
+                    Executioner.AddEmotionReaction(EEmotionType.Neutral);
                 break;
             default: 
                 break;
         }
-        switch (subject)
-        {
-            case Noun.Queen:
-                King.AddEmotionReaction(EEmotionType.Happy);
-                Queen.AddEmotionReaction(EEmotionType.Angry);
-                Heir.AddEmotionReaction(EEmotionType.Happy);
-                Executioner.AddEmotionReaction(EEmotionType.Neutral);
-                //Audience.AddReaction
-                break;
-            case Noun.King:
-                King.AddEmotionReaction(EEmotionType.Angry);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Heir.AddEmotionReaction(EEmotionType.Happy);
-                Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
-                //Audience.AddReaction
-                break;
-            case Noun.Audience:
-                King.AddEmotionReaction(EEmotionType.Embarrassed);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Heir.AddEmotionReaction(EEmotionType.Happy);
-                Executioner.AddEmotionReaction(EEmotionType.Happy);
-                //Audience.AddReaction
-                break;
-            case Noun.Heir:
-                King.AddEmotionReaction(EEmotionType.Happy);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Heir.AddEmotionReaction(EEmotionType.Crying);
-                Executioner.AddEmotionReaction(EEmotionType.Neutral);
-                //Audience.AddReaction
-                break;
-            case Noun.Executioner:
-                King.AddEmotionReaction(EEmotionType.Happy);
-                Queen.AddEmotionReaction(EEmotionType.Happy);
-                Heir.AddEmotionReaction(EEmotionType.Crying);
-                Executioner.AddEmotionReaction(EEmotionType.Angry);
-                //Audience.AddReaction
-                break;
-            default:
-                break;
-        }
+
         TellJoke();
     }
 
