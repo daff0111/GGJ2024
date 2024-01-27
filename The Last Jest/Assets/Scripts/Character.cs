@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.VFX;
 
 public enum EEmotionType
 {
@@ -45,16 +46,12 @@ public class Character : MonoBehaviour
 
     public ECharacterType CharacterType;
     public float StartingAngryMeter = 50;
-    [Header("Emotion Materials")]
-    public Material MaterialHappyFace;
-    public Material MaterialNeutralFace;
-    public Material MaterialCryingFace;
-    public Material MaterialEmbarrassedFace;
-    public Material MaterialAngryFace;
-    [Header("Child Objects")]
-    public GameObject TextObject;
 
     SkinnedMeshModifier headModifier;
+    [Header("Effects")]
+    public VisualEffect AngryEffect;
+    public VisualEffect AngryEffect1;
+    public VisualEffect HappyEffect;
 
     protected float AngryMeter = 50;
     protected CharacterMultiplier Multipliers;
@@ -70,12 +67,7 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        CharacterText = TextObject.GetComponent<TMP_Text>();
         SetAngryMeter(StartingAngryMeter);
-
-        // TEST TEXT
-        CharacterText.gameObject.GetComponent<MeshRenderer>().enabled = IsRoyalCharacter();
-        CharacterText.text = CharacterType.ToString() + "\n" + AngryMeter;
     }
 
     // Update is called once per frame
@@ -97,12 +89,6 @@ public class Character : MonoBehaviour
         {
             headModifier.SetSliderValue((((StartingAngryMeter - newValue) / StartingAngryMeter) * 180) - 50); //Magic number to match Happyness on the face
         }
-
-        if (!IsRoyalCharacter())
-            return;
-
-        // TEST TEXT
-        UpdateCharacterText();
     }
 
     public void AddAngryMeter(float newValue)
@@ -145,12 +131,21 @@ public class Character : MonoBehaviour
     public virtual void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
         AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
+        if (AngryEffect != null)
+            AngryEffect.enabled = false;
+        if(AngryEffect1 != null)
+            AngryEffect1.enabled = false;
+        if (HappyEffect != null)
+            HappyEffect.enabled = false;
+
         if (!IsRoyalCharacter())
             return;
+
         switch (emotionReaction) 
         {
             case EEmotionType.Happy:
-                //FaceMesh.material = MaterialHappyFace;
+                if (HappyEffect)
+                    HappyEffect.enabled = true;
                 break;
             case EEmotionType.Neutral:
                 //FaceMesh.material = MaterialNeutralFace;
@@ -162,7 +157,10 @@ public class Character : MonoBehaviour
                 //FaceMesh.material = MaterialEmbarrassedFace;
                 break;
             case EEmotionType.Angry:
-                //FaceMesh.material = MaterialAngryFace;
+                if (AngryEffect)
+                    AngryEffect.enabled = true;
+                if (AngryEffect1)
+                    AngryEffect1.enabled = true;
                 break;
             default:
                 break;

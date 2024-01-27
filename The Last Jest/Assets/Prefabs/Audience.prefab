@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7394333855162516389, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -60,14 +61,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -4509491043500278809}
   m_SourcePrefab: {fileID: 100100000, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
---- !u!1 &1509055167682045881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1450482802153827842, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
-  m_PrefabInstance: {fileID: 58577317057186235}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1932146158232038943 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1873576007598385060, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+--- !u!2083052967 &2843457225819009555 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 2856943021061274536, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 58577317057186235}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4546690294071090926 stripped
@@ -89,11 +85,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterType: 6
   StartingAngryMeter: 200
-  MaterialHappyFace: {fileID: 2100000, guid: f16e4b8fef64b2b43a8e908ecb99259b, type: 2}
-  MaterialNeutralFace: {fileID: 2100000, guid: d9ea4a323461acc4aa34f369c72e3edf, type: 2}
-  MaterialCryingFace: {fileID: 2100000, guid: 1bb3e3e191bf8bf4ab80bab59db0b7ac, type: 2}
-  MaterialEmbarrassedFace: {fileID: 2100000, guid: 1f1aa86505685514185a534f4cc2c6e2, type: 2}
-  MaterialAngryFace: {fileID: 2100000, guid: b096caea471f2d84583020297b1c6577, type: 2}
-  FaceObject: {fileID: 1509055167682045881}
-  TextObject: {fileID: 1932146158232038943}
+  AngryEffect: {fileID: 2843457225819009555}
+  AngryEffect1: {fileID: 6617212612813235047}
+  HappyEffect: {fileID: 7513360947927390647}
   audienceCharacters: []
+--- !u!2083052967 &6617212612813235047 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 6558670481537460956, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 58577317057186235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &7513360947927390647 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 7535870435235713036, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 58577317057186235}
+  m_PrefabAsset: {fileID: 0}

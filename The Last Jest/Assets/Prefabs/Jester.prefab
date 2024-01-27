@@ -1,5 +1,116 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7132448012710841634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495690174603976952}
+  - component: {fileID: 1355669126277967852}
+  - component: {fileID: 7113651372744473217}
+  m_Layer: 0
+  m_Name: BloodSplatter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495690174603976952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132448012710841634}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3494536665346658166}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!2083052967 &1355669126277967852
+VisualEffect:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132448012710841634}
+  m_Enabled: 0
+  m_Asset: {fileID: 8926484042661614526, guid: 332ee69304d771f4e837af7298544691, type: 3}
+  m_InitialEventName: OnPlay
+  m_InitialEventNameOverriden: 0
+  m_StartSeed: 0
+  m_ResetSeedOnPlay: 0
+  m_AllowInstancing: 1
+  m_ResourceVersion: 1
+  m_PropertySheet:
+    m_Float:
+      m_Array: []
+    m_Vector2f:
+      m_Array: []
+    m_Vector3f:
+      m_Array: []
+    m_Vector4f:
+      m_Array: []
+    m_Uint:
+      m_Array: []
+    m_Int:
+      m_Array: []
+    m_Matrix4x4f:
+      m_Array: []
+    m_AnimationCurve:
+      m_Array: []
+    m_Gradient:
+      m_Array: []
+    m_NamedObject:
+      m_Array: []
+    m_Bool:
+      m_Array: []
+--- !u!73398921 &7113651372744473217
+VFXRenderer:
+  serializedVersion: 1
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132448012710841634}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 0
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 257
+  m_RendererPriority: 0
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1001 &1617082155370707624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,6 +337,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 386305550579943144, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1295839163152801091}
+    - targetCorrespondingSourceObject: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495690174603976952}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
@@ -237,6 +351,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 3823157804341215119}
   m_SourcePrefab: {fileID: 100100000, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+--- !u!4 &3494536665346658166 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5226718652999215953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5088705398484580099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1015489652454595666, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -295,11 +414,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 386305550579943144, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 5226718652999215953}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5947372331070754037 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1873576007598385060, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
-  m_PrefabInstance: {fileID: 5226718652999215953}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8592874230459743236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -317,12 +431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc0e7dee1a60574b8168c0861c99f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterType: 0
+  CharacterType: 4
   StartingAngryMeter: 50
-  MaterialHappyFace: {fileID: 2100000, guid: f16e4b8fef64b2b43a8e908ecb99259b, type: 2}
-  MaterialNeutralFace: {fileID: 2100000, guid: d9ea4a323461acc4aa34f369c72e3edf, type: 2}
-  MaterialCryingFace: {fileID: 0}
-  MaterialEmbarrassedFace: {fileID: 0}
-  MaterialAngryFace: {fileID: 2100000, guid: b096caea471f2d84583020297b1c6577, type: 2}
-  TextObject: {fileID: 5947372331070754037}
+  AngryEffect: {fileID: 0}
+  AngryEffect1: {fileID: 0}
+  HappyEffect: {fileID: 0}
   Head: {fileID: 268212847894768738}
+  BloodSplatter: {fileID: 1355669126277967852}
