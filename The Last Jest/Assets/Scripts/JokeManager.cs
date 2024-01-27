@@ -8,7 +8,8 @@ public class JokeManager : MonoBehaviour
     {
         A,
         B,
-        C
+        C,
+        D
     };
 
     public JesterCharacter Jester;
@@ -40,6 +41,11 @@ public class JokeManager : MonoBehaviour
         {
             TellJoke(EJokeType.C);
         }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            TellJoke(EJokeType.D);
+        }
     }
 
     void TellJoke(EJokeType joke)
@@ -64,6 +70,12 @@ public class JokeManager : MonoBehaviour
                 Princess.AddAngryMeter(-20);
                 Executioner.AddAngryMeter(20);
                 break;
+            case EJokeType.D:
+                King.AddAngryMeter(20);
+                Queen.AddAngryMeter(10);
+                Princess.AddAngryMeter(-30);
+                Executioner.AddAngryMeter(20);
+                break;
             default:
                 break;
         }
@@ -84,6 +96,7 @@ public class JokeManager : MonoBehaviour
         {
             // You Died - The Executioner is angry and he kills you
             Executioner.KillJester();
+            Executioner.RevealAngryFace();
         }
 
         if(Queen.GetAngryMeter() <= 0)
