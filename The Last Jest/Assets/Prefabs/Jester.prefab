@@ -187,6 +187,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.469
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049824641263661273, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9049824641263661273, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -6478536213147159724, guid: 2e8ad63efd31fe74f95486b2e6b779d2, type: 3}
+    - target: {fileID: 9049824641263661273, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -6742216632579206239, guid: 2e8ad63efd31fe74f95486b2e6b779d2, type: 3}
+    - target: {fileID: 9157279154714618500, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4445365614842436223, guid: 89e5d1852482a7b43be5eaf5bf26a8ae, type: 3}
     m_RemovedComponents:
     - {fileID: 7394333855162516389, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
     m_RemovedGameObjects: []
@@ -292,6 +324,5 @@ MonoBehaviour:
   MaterialCryingFace: {fileID: 0}
   MaterialEmbarrassedFace: {fileID: 0}
   MaterialAngryFace: {fileID: 2100000, guid: b096caea471f2d84583020297b1c6577, type: 2}
-  FaceObject: {fileID: 0}
   TextObject: {fileID: 5947372331070754037}
   Head: {fileID: 268212847894768738}
