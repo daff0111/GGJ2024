@@ -139,6 +139,17 @@ public class JokeManager : MonoBehaviour
 
         Character characterSubject = GetCharacterWithNoun(subject);
         Character characterObject = GetCharacterWithNoun(jokeObject);
+        if (characterSubject == null)
+        {
+            // Bad Joke
+            King.AddEmotionReaction(EEmotionType.Neutral);
+            Queen.AddEmotionReaction(EEmotionType.Neutral);
+            Heir.AddEmotionReaction(EEmotionType.Neutral);
+            Executioner.AddEmotionReaction(EEmotionType.Neutral);
+            Audience.AddEmotionReaction(EEmotionType.Angry, 2);
+            TellJoke();
+            return;
+        }
 
         switch (Level)
         {
@@ -188,6 +199,46 @@ public class JokeManager : MonoBehaviour
                         Executioner.AddEmotionReaction(EEmotionType.Neutral);
                         Audience.AddEmotionReaction(EEmotionType.Angry, 2);
                     }
+                }
+                if (verb == Verb.Hates)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 1);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Angry, 1);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
+                }
+                if (verb == Verb.Loves)
+                {
+                    characterSubject.AddEmotionReaction(EEmotionType.Neutral);
+                    if (characterObject != null)
+                        characterObject.AddEmotionReaction(EEmotionType.Embarrassed, 2);
+
+                    Audience.AddEmotionReaction(EEmotionType.Neutral);
+                    // King is not ammused
+                    if (characterSubject != King && characterObject != King)
+                        King.AddEmotionReaction(EEmotionType.Neutral);
+                    // Queen is not ammused
+                    if (characterSubject != Queen && characterObject != Queen)
+                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    // Heir is not ammused
+                    if (characterSubject != Heir && characterObject != Heir)
+                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    // Executioner is not ammused
+                    if (characterSubject != Executioner && characterObject != Executioner)
+                        Executioner.AddEmotionReaction(EEmotionType.Neutral);
                 }
                 break;
             case 2:
@@ -421,6 +472,17 @@ public class JokeManager : MonoBehaviour
         }
         Debug.LogFormat("{0} is {1}", subject.ToString(), adjective.ToString());
         Character characterSubject = GetCharacterWithNoun(subject);
+        if (characterSubject == null)
+        {
+            // Bad Joke
+            King.AddEmotionReaction(EEmotionType.Neutral);
+            Queen.AddEmotionReaction(EEmotionType.Neutral);
+            Heir.AddEmotionReaction(EEmotionType.Neutral);
+            Executioner.AddEmotionReaction(EEmotionType.Neutral);
+            Audience.AddEmotionReaction(EEmotionType.Angry, 2);
+            TellJoke();
+            return;
+        }
         switch (Level)
         {
             case 1:
