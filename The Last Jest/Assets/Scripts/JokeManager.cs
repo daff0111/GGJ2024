@@ -56,6 +56,7 @@ public class JokeManager : MonoBehaviour
         Big,
     }
 
+    public UIManager UIManagerObject;
     public JesterCharacter Jester;
     public Character King;
     public Character Queen;
@@ -126,6 +127,23 @@ public class JokeManager : MonoBehaviour
         if (Audience.GetAngryMeter() <= 0)
         {
             // Audience is Angry - not sure what to do ?
+        }
+        // You are dead
+        if (GameOver)
+            return;
+
+        if (JokeCount == 3)
+        {
+            StartLevel(2);
+        }
+        if (JokeCount == 6)
+        {
+            StartLevel(3);
+        }
+        if (JokeCount == 9)
+        {
+            GameOver = true;
+            Debug.Log("YOU WON - You told " + JokeCount + " Jokes. Press 'R' to Restart");
         }
     }
 
@@ -610,6 +628,7 @@ public class JokeManager : MonoBehaviour
         GameOver = true;
         Debug.Log("YOU DIED - You told " + JokeCount + " Jokes. Press 'R' to Restart");
     }
+
     void StartLevel(int level)
     {
         Level = level;
@@ -628,6 +647,7 @@ public class JokeManager : MonoBehaviour
             default:
                 break;
         }
+        UIManagerObject.InitializeOptions(level);
     }
 
     void SetMultipliersForCharacters(CharacterMultipliersSet multiplierSet)

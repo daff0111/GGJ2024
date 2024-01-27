@@ -40,10 +40,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeOptions(jokeManager.Level);
+
     }
 
-    private void InitializeOptions(int level)
+    public void InitializeOptions(int level)
     {
         List<TMP_Dropdown.OptionData> subjectOptions = new List<TMP_Dropdown.OptionData>();
         List<TMP_Dropdown.OptionData> objectOptions = new List<TMP_Dropdown.OptionData>();
