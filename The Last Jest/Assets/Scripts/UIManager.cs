@@ -32,7 +32,12 @@ public class UIManager : MonoBehaviour
     JokeManager.Adjective selectedAdjective;
     [SerializeField]
     Button submitButton;
-    
+    [SerializeField]
+    GameObject panel;
+    [SerializeField]
+    TMP_Text ShowHideText;
+
+
     private void Start()
     {
         InitializeOptions(jokeManager.Level);
@@ -116,4 +121,9 @@ public class UIManager : MonoBehaviour
         selectedAdjective = (JokeManager.Adjective)Enum.Parse(typeof(JokeManager.Adjective), adjectiveSelector.options[adjectiveSelector.value].text);
     }
 
+    public void ToggleVisibility()
+    {
+        panel.SetActive(!panel.activeInHierarchy);
+        ShowHideText.text = panel.activeInHierarchy ? "/\\" : "\\/";
+    }
 }
