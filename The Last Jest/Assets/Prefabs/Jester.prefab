@@ -64,16 +64,49 @@ PrefabInstance:
       propertyPath: m_Name
       value: Playmobil_Hat
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5e16bda5bad498a4e9c44747ef3d909c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8699652204047898494, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1304885588885091844}
   m_SourcePrefab: {fileID: 100100000, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
 --- !u!4 &1295839163152801091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
   m_PrefabInstance: {fileID: 1617082155370707624}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7983290257628360150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8699652204047898494, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
+  m_PrefabInstance: {fileID: 1617082155370707624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1304885588885091844
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983290257628360150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
+  m_Controller: {fileID: 9100000, guid: 5e16bda5bad498a4e9c44747ef3d909c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5226718652999215953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Name
-      value: Jester1
+      value: Jester
       objectReference: {fileID: 0}
     - target: {fileID: 5249831986391005457, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -165,9 +198,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067845542932256396}
-    - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8376635046111621096}
     - targetCorrespondingSourceObject: {fileID: 1015489652454595666, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 268212847894768738}
@@ -265,24 +295,3 @@ MonoBehaviour:
   FaceObject: {fileID: 0}
   TextObject: {fileID: 5947372331070754037}
   Head: {fileID: 268212847894768738}
---- !u!95 &8376635046111621096
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8592874230459743236}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e16bda5bad498a4e9c44747ef3d909c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
