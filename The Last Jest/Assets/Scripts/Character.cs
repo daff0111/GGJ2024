@@ -94,7 +94,10 @@ public class Character : MonoBehaviour
     { 
         AngryMeter = newValue;
 
-        headModifier.SetSliderValue((((StartingAngryMeter - newValue)/StartingAngryMeter)*180)-50); //Magic number to match Happyness on the face
+        if (headModifier)
+        {
+            headModifier.SetSliderValue((((StartingAngryMeter - newValue) / StartingAngryMeter) * 180) - 50); //Magic number to match Happyness on the face
+        }
 
         if (!IsRoyalCharacter())
             return;
