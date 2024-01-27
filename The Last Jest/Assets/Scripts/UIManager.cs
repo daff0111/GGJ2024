@@ -40,10 +40,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeOptions(jokeManager.Level);
+
     }
 
-    private void InitializeOptions(int level)
+    public void InitializeOptions(int level)
     {
         List<TMP_Dropdown.OptionData> subjectOptions = new List<TMP_Dropdown.OptionData>();
         List<TMP_Dropdown.OptionData> objectOptions = new List<TMP_Dropdown.OptionData>();
@@ -64,6 +64,9 @@ public class UIManager : MonoBehaviour
         subjectSelector.onValueChanged.AddListener(delegate { SubjectSelected(subjectSelector); });
         objectSelector.onValueChanged.AddListener(delegate { ObjectSelected(objectSelector); });
 
+        SubjectSelected(subjectSelector);
+        ObjectSelected(objectSelector);
+
         List<TMP_Dropdown.OptionData> verbOptions = new List<TMP_Dropdown.OptionData>();
         foreach (var verbSpritePair in iconContainer.VerbSprites)
         {
@@ -76,6 +79,7 @@ public class UIManager : MonoBehaviour
         verbSelector.AddOptions(verbOptions);
         verbSelector.onValueChanged.AddListener(delegate { VerbSelected(verbSelector); });
 
+        VerbSelected(verbSelector);
 
         List<TMP_Dropdown.OptionData> adjectiveOptions = new List<TMP_Dropdown.OptionData>();
         foreach (var adjectiveSpritePair in iconContainer.AdjectiveSprites)
@@ -88,6 +92,8 @@ public class UIManager : MonoBehaviour
         adjectiveSelector.ClearOptions();
         adjectiveSelector.AddOptions(adjectiveOptions);
         adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
+
+        AdjectiveSelected(adjectiveSelector);
     }
 
     public void SubmitJoke()

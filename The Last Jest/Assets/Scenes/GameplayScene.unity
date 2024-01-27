@@ -494,61 +494,61 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4457007953240204318, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_Name
-      value: Jester
-      objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7897470873231592222, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592874230459743236, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
+      propertyPath: m_Name
+      value: Jester2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1734786444803020015, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5947372331070754037, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
 --- !u!114 &120910667 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4681973645645400691, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2067845542932256396, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
   m_PrefabInstance: {fileID: 120910666}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7058,13 +7058,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 598440774}
     - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
-      propertyPath: Princess
-      value: 
-      objectReference: {fileID: 2016061910}
-    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
       propertyPath: Executioner
       value: 
       objectReference: {fileID: 1284147181}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: UIManagerObject
+      value: 
+      objectReference: {fileID: 1455840416}
     - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
       propertyPath: Level1MultiplierSet.HeirMultiplier.AngryMultiplier
       value: 1
