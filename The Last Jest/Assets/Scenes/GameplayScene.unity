@@ -7065,6 +7065,246 @@ PrefabInstance:
       propertyPath: Executioner
       value: 
       objectReference: {fileID: 1284147181}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.HeirMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.HeirMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.KingMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.KingMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.HeirMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.HeirMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.KingMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.KingMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.HeirMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.HeirMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.KingMultiplier.AngryMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.KingMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.HeirMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.KingMultiplier.CryingMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.QueenMultiplier.AngryMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.QueenMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.HeirMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.KingMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.QueenMultiplier.AngryMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.QueenMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.HeirMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.KingMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.QueenMultiplier.AngryMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.QueenMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.QueenMultiplier.CryingMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.QueenMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.QueenMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.AudienceMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.AudienceMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.AudienceMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.AudienceMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.AudienceMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.AudienceMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.AudienceMultiplier.CryingMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.AudienceMultiplier.CryingMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.AudienceMultiplier.CryingMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.HeirMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.KingMultiplier.EmbarrassedMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.HeirMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.KingMultiplier.EmbarrassedMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.HeirMultiplier.EmbarrassedMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.KingMultiplier.EmbarrassedMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.ExecutionerMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.ExecutionerMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.QueenMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.ExecutionerMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.ExecutionerMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.QueenMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.ExecutionerMultiplier.AngryMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.ExecutionerMultiplier.HappyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.QueenMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.ExecutionerMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.ExecutionerMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.ExecutionerMultiplier.CryingMultiplier
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.AudienceMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.AudienceMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.AudienceMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level1MultiplierSet.ExecutionerMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level2MultiplierSet.ExecutionerMultiplier.EmbarrassedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998388475366179601, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
+      propertyPath: Level3MultiplierSet.ExecutionerMultiplier.EmbarrassedMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5465529552629128521, guid: 331a245ba811d3e4988033405944d2ed, type: 3}
       propertyPath: m_Name
       value: JokeManager

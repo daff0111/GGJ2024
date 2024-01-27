@@ -8,12 +8,8 @@ public class AudienceCharacter : Character
 
     protected override void Start()
     {
-        base.Start();
         CharacterType = ECharacterType.Audience;
-        foreach(Character aCharacter in audienceCharacters)
-        {
-            aCharacter.CharacterType = ECharacterType.Audience;
-        }
+        base.Start();
     }
 
     public override void AddEmotionReaction(EEmotionType emotionReaction)
