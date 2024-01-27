@@ -23,7 +23,8 @@ public class Character : MonoBehaviour
         Queen,
         Heir,
         Jester,
-        Executioner
+        Executioner,
+        Audience
     };
 
     public enum ECharacterState
@@ -45,21 +46,24 @@ public class Character : MonoBehaviour
     public GameObject FaceObject;
     public GameObject TextObject;
 
-    protected MeshRenderer FaceMesh;
     protected float AngryMeter = 50;
+
+    protected float HappyMultiplier = 1;
+    protected float EmbarrassedMultiplier = 1;
+    protected float CryingMultiplier = 1;
+    protected float AngryMultiplier = 1;
 
     // TEST TEXT
     protected TMP_Text CharacterText;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        FaceMesh = FaceObject.GetComponent<MeshRenderer>();
         CharacterText = TextObject.GetComponent<TMP_Text>();
         
         SetAngryMeter(StartingAngryMeter);
-        if (IsRoyalCharacter())
-            FaceMesh.material = MaterialNeutralFace;
+        /*if (IsRoyalCharacter())
+            FaceMesh.material = MaterialNeutralFace;*/
 
         // TEST TEXT
         CharacterText.gameObject.GetComponent<MeshRenderer>().enabled = IsRoyalCharacter();
@@ -91,9 +95,9 @@ public class Character : MonoBehaviour
     public void AddAngryMeter(float newValue)
     {
         float angryness = AngryMeter + newValue;
-        if(angryness > 100)
+        if(angryness > StartingAngryMeter)
         {
-            angryness = 100;
+            angryness = StartingAngryMeter;
         }
         else if(angryness < 0)
         {
@@ -125,7 +129,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void AddEmotionReaction(EEmotionType emotionReaction)
+    public virtual void AddEmotionReaction(EEmotionType emotionReaction)
     {
         AddAngryMeter(GetReactionMeter(emotionReaction));
         if (!IsRoyalCharacter())
@@ -133,43 +137,51 @@ public class Character : MonoBehaviour
         switch (emotionReaction) 
         {
             case EEmotionType.Happy:
-                FaceMesh.material = MaterialHappyFace;
+                //FaceMesh.material = MaterialHappyFace;
                 break;
             case EEmotionType.Neutral:
-                FaceMesh.material = MaterialNeutralFace;
+                //FaceMesh.material = MaterialNeutralFace;
                 break;
             case EEmotionType.Crying:
-                FaceMesh.material = MaterialCryingFace;
+                //FaceMesh.material = MaterialCryingFace;
                 break;
             case EEmotionType.Embarrassed:
-                FaceMesh.material = MaterialEmbarrassedFace;
+                //FaceMesh.material = MaterialEmbarrassedFace;
                 break;
             case EEmotionType.Angry:
-                FaceMesh.material = MaterialAngryFace;
+                //FaceMesh.material = MaterialAngryFace;
                 break;
             default:
                 break;
         }
     }
 
-    float GetReactionMeter(EEmotionType emotionReaction)
+    protected float GetReactionMeter(EEmotionType emotionReaction)
     {
         // Map this values somehow depending on Character and Day?
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
-                return 30;
+                return 5 * HappyMultiplier;
             case EEmotionType.Neutral:
                 return 0;
             case EEmotionType.Embarrassed:
-                return -10;
+                return -5 * EmbarrassedMultiplier;
             case EEmotionType.Crying:
-                return -20;
+                return -5 * CryingMultiplier;
             case EEmotionType.Angry:
-                return -30;
+                return -5 * AngryMultiplier;
             default:
                 break;
         }
         return 0;
+    }
+
+    public void SetMultipliers(float happy, float embarrassed, float crying, float angry)
+    {
+        HappyMultiplier = happy;
+        EmbarrassedMultiplier = embarrassed;
+        CryingMultiplier = crying;
+        AngryMultiplier = angry;
     }
 }

@@ -24,7 +24,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7394333855162516389, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: StartingAngryMeter
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8037244791023188053, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
