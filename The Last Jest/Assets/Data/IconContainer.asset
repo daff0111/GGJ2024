@@ -60,17 +60,17 @@ MonoBehaviour:
   - Adejctive: 0
     Sprite: {fileID: 0}
     UnlockLevel: 0
-  - Adejctive: 6
-    Sprite: {fileID: 0}
+  - Adejctive: 7
+    Sprite: {fileID: 21300000, guid: a4ad0e3d3c2e20844a9822e32ebdec3e, type: 3}
     UnlockLevel: 3
   - Adejctive: 1
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: e0000f8e1befe9a42ac181053a76ec1d, type: 3}
     UnlockLevel: 1
   - Adejctive: 2
     Sprite: {fileID: 0}
     UnlockLevel: 2
   - Adejctive: 3
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 4fa40b5c4878d5345b6acb0eb0cbef4e, type: 3}
     UnlockLevel: 2
   - Adejctive: 4
     Sprite: {fileID: 0}
@@ -79,5 +79,5 @@ MonoBehaviour:
     Sprite: {fileID: 0}
     UnlockLevel: 3
   - Adejctive: 6
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 16bbc97c8677c93428644f79b4143020, type: 3}
     UnlockLevel: 3

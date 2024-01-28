@@ -159,8 +159,16 @@ public class UIManager : MonoBehaviour
         adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
 
         AdjectiveSelected(adjectiveSelector);
+        
+        subjectSelector.gameObject.SetActive(false);
+        verbSelector.gameObject.SetActive(false);
+        objectSelector.gameObject.SetActive(false);
+        adjectiveSelector.gameObject.SetActive(false);
+
         InitializeRound(1);
         LevelText.text = $"Level: {level.ToString()}";
+        RoundText.text = $"Round: ";
+
     }
 
     public void SubmitJoke()
@@ -231,10 +239,12 @@ public class UIManager : MonoBehaviour
     {
         submitButton.enabled = false;
 
-        yield return new WaitForSeconds(RoundBeginDelay);
+        if (round != 1)
+            yield return new WaitForSeconds(RoundBeginDelay);
 
         RoundText.text = $"Round: {round.ToString()}";
 
+        subjectSelector.gameObject.SetActive(true);
         verbSelector.gameObject.SetActive(false);
         objectSelector.gameObject.SetActive(false);
         adjectiveSelector.gameObject.SetActive(false);
@@ -243,6 +253,8 @@ public class UIManager : MonoBehaviour
         ResetVerb();
         ResetAdjective();
         ResetObject();
+
+        yield return null;
     }
 
     private void ResetObject()
