@@ -1163,6 +1163,7 @@ GameObject:
   - component: {fileID: 4930582771057321910}
   - component: {fileID: 1977622434086518666}
   - component: {fileID: 1750125241559142602}
+  - component: {fileID: 4000808235728555271}
   m_Layer: 5
   m_Name: SubjectImage
   m_TagString: Untagged
@@ -1180,7 +1181,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 168773149031862088}
   m_Father: {fileID: 5736299080505723309}
@@ -1228,6 +1229,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4000808235728555271
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460416726298032405}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db1a8af4223add74db1c349b6b1a54f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1731130072061395656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,9 +5323,13 @@ MonoBehaviour:
   ComplementImage: {fileID: 7942524216324068677}
   LevelText: {fileID: 8200014741022579749}
   RoundText: {fileID: 2746610489980915458}
+  CardAnimator: {fileID: 4000808235728555271}
   LevelBeginDelay: 2.5
+  RoundBeginDelay: 2.5
+  SubmissionDelay: 2.5
   announcementText: {fileID: 5447735268306939916}
   announcementBack: {fileID: 330292472206150350}
+  cardBack: {fileID: 21300000, guid: 3edf14eea6ba09c4580a62d4ee79a2af, type: 3}
 --- !u!1 &7142475866772534707
 GameObject:
   m_ObjectHideFlags: 0
