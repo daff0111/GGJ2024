@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -903,6 +903,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 853801605}
     m_Modifications:
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2067845542932256396, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: CharacterType
       value: 4
@@ -950,14 +958,6 @@ PrefabInstance:
     - target: {fileID: 8592874230459743236, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_Name
       value: Jester
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2437,6 +2437,8 @@ GameObject:
   - component: {fileID: 1169776104}
   - component: {fileID: 1169776103}
   - component: {fileID: 1169776102}
+  - component: {fileID: 1169776107}
+  - component: {fileID: 1169776108}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2652,6 +2654,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 4.077, y: -1.564, z: -0.192}
+--- !u!81 &1169776107
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169776101}
+  m_Enabled: 1
+--- !u!114 &1169776108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169776101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -466126789
+      Data2: 1310468364
+      Data3: -460678758
+      Data4: 1382620741
+    Path: event:/Music/Jest
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1180588989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2200019697238798801, guid: 3b732066e39ebb149ac02bce8787d8b4, type: 3}
