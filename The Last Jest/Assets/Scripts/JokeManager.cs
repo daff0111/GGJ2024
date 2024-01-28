@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using FMODUnity;
+
 using static JokeManager;
 
 public class JokeManager : MonoBehaviour
@@ -75,6 +77,10 @@ public class JokeManager : MonoBehaviour
     public CharacterMultipliersSet Level1MultiplierSet;
     public CharacterMultipliersSet Level2MultiplierSet;
     public CharacterMultipliersSet Level3MultiplierSet;
+    [Header("Audio Effects")]
+    public StudioEventEmitter Level1Fanfare;
+    public StudioEventEmitter Level2Fanfare;
+    public StudioEventEmitter Level3Fanfare;
 
     // Start is called before the first frame update
     void Start()
@@ -638,13 +644,16 @@ public class JokeManager : MonoBehaviour
         {
             case 1:
                 SetMultipliersForCharacters(Level1MultiplierSet);
+                Level1Fanfare.Play();
                 break;
             case 2:
                 SetMultipliersForCharacters(Level2MultiplierSet);
                 Heir.AddEmotionReaction(EEmotionType.Crying); // Bunny Died
+                Level2Fanfare.Play();
                 break;
             case 3:
                 SetMultipliersForCharacters(Level3MultiplierSet);
+                Level3Fanfare.Play();
                 break;
             default:
                 break;

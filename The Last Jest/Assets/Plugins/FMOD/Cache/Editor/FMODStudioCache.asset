@@ -137,7 +137,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &-4473993756969953332
+--- !u!114 &-5316668478148763403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,14 +147,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tarot_Cards/Small
+  m_Name: event:/Tarot_Cards/Hates_verb
   m_EditorClassIdentifier: 
-  Path: event:/Tarot_Cards/Small
+  Path: event:/Tarot_Cards/Hates_verb
   Guid:
-    Data1: 1421919274
-    Data2: 1096515295
-    Data3: -1221834324
-    Data4: -74805114
+    Data1: -1919519045
+    Data2: 1206194288
+    Data3: -382172020
+    Data4: -1234060501
   Banks:
   - {fileID: 944776673882295420}
   IsStream: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 960
+  Length: 10000
 --- !u!114 &-4353111012773712510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,11 +206,38 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420469260000000
+  lastModified: 638420601785986968
   FileSizes:
   - Name: Desktop
-    Value: 2188
+    Value: 2472
   Exists: 1
+--- !u!114 &-3230569245998303062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Loves_verb
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Loves_verb
+  Guid:
+    Data1: -1152818825
+    Data2: 1155847441
+    Data3: -362056047
+    Data4: 80002581
+  Banks:
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000
 --- !u!114 &-3141593970524463038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +265,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13000
+--- !u!114 &-2863936771350953765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Food_adj
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Food_adj
+  Guid:
+    Data1: -2105659391
+    Data2: 1162032569
+    Data3: 984678036
+    Data4: -189565985
+  Banks:
+  - {fileID: 7073904416953007797}
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12500
 --- !u!114 &-2703153983444172577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,11 +308,39 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420469260000000
+  lastModified: 638420601786093216
   FileSizes:
   - Name: Desktop
     Value: 572000
   Exists: 1
+--- !u!114 &-2408537372248375087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Small_adj
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Small_adj
+  Guid:
+    Data1: 1421919274
+    Data2: 1096515295
+    Data3: -1221834324
+    Data4: -74805114
+  Banks:
+  - {fileID: 7073904416953007797}
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 960
 --- !u!114 &-1816902888592290587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +368,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 19591
+--- !u!114 &-1414804147741370319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Serves_verb
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Serves_verb
+  Guid:
+    Data1: -1659518374
+    Data2: 1098251535
+    Data3: 1190125462
+    Data4: 1129607164
+  Banks:
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2721
 --- !u!114 &-890311405368666595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +438,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420469260000000
+  lastModified: 638420601785926551
   FileSizes:
   - Name: Desktop
     Value: 302016
@@ -404,15 +514,21 @@ MonoBehaviour:
   - {fileID: -7635578709680149508}
   - {fileID: -1816902888592290587}
   - {fileID: 1154871896195156065}
-  - {fileID: 6723275605215694099}
-  - {fileID: -4473993756969953332}
-  - {fileID: 7070407297637895486}
+  - {fileID: -2863936771350953765}
+  - {fileID: 3723551280485114016}
+  - {fileID: -2408537372248375087}
+  - {fileID: 1592849494875563841}
+  - {fileID: 2145700740599113148}
+  - {fileID: -1414804147741370319}
+  - {fileID: 8887590187520102790}
+  - {fileID: -3230569245998303062}
+  - {fileID: -5316668478148763403}
   EditorParameters: []
   MasterBanks:
   - {fileID: -676524760872529252}
   StringsBanks:
   - {fileID: -3428321775351771228}
-  cacheTime: 638420473220000000
+  cacheTime: 638420601786380719
   cacheVersion: 131616
 --- !u!114 &237174538320804270
 MonoBehaviour:
@@ -456,10 +572,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Tarot_Cards.bank
   Name: Tarot_Cards
   StudioPath: bank:/Tarot_Cards
-  lastModified: 638420440600000000
+  lastModified: 638420601786178905
   FileSizes:
   - Name: Desktop
-    Value: 69952
+    Value: 249280
   Exists: 1
 --- !u!114 &1154871896195156065
 MonoBehaviour:
@@ -516,6 +632,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3500
+--- !u!114 &1592849494875563841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Fart_adj
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Fart_adj
+  Guid:
+    Data1: -1367982693
+    Data2: 1113108235
+    Data3: 821069226
+    Data4: 1148204419
+  Banks:
+  - {fileID: 7073904416953007797}
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &1775043488028165697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +688,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &2145700740599113148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/(is)Insult_verb
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/(is)Insult_verb
+  Guid:
+    Data1: -1706230034
+    Data2: 1229791054
+    Data3: 570238601
+    Data4: -1460198482
+  Banks:
+  - {fileID: 7073904416953007797}
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3283
 --- !u!114 &2185299057933817116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,11 +841,39 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Audience.bank
   Name: Audience
   StudioPath: bank:/Audience
-  lastModified: 638420471900000000
+  lastModified: 638420601786380719
   FileSizes:
   - Name: Desktop
     Value: 2185728
   Exists: 1
+--- !u!114 &3723551280485114016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Pig_adj
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Pig_adj
+  Guid:
+    Data1: -1900014584
+    Data2: 1311741366
+    Data3: -369630071
+    Data4: -1331062408
+  Banks:
+  - {fileID: 7073904416953007797}
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
 --- !u!114 &4543840158660551720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,60 +956,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &6723275605215694099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tarot_Cards/Food
-  m_EditorClassIdentifier: 
-  Path: event:/Tarot_Cards/Food
-  Guid:
-    Data1: -2105659391
-    Data2: 1162032569
-    Data3: 984678036
-    Data4: -189565985
-  Banks:
-  - {fileID: 944776673882295420}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 12500
---- !u!114 &7070407297637895486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Tarot_Cards/Pig
-  m_EditorClassIdentifier: 
-  Path: event:/Tarot_Cards/Pig
-  Guid:
-    Data1: -1367982693
-    Data2: 1113108235
-    Data3: 821069226
-    Data4: 1148204419
-  Banks:
-  - {fileID: 944776673882295420}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &7073904416953007797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,10 +971,10 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Character_Moods.bank
   Name: Character_Moods
   StudioPath: bank:/Character_Moods
-  lastModified: 638420473220000000
+  lastModified: 638420601785846825
   FileSizes:
   - Name: Desktop
-    Value: 922368
+    Value: 1056416
   Exists: 1
 --- !u!114 &7529769738677467450
 MonoBehaviour:
@@ -884,3 +1030,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 150000
+--- !u!114 &8887590187520102790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tarot_Cards/Kills_verb
+  m_EditorClassIdentifier: 
+  Path: event:/Tarot_Cards/Kills_verb
+  Guid:
+    Data1: -71340705
+    Data2: 1180853319
+    Data3: -205598535
+    Data4: 1948062269
+  Banks:
+  - {fileID: 944776673882295420}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
