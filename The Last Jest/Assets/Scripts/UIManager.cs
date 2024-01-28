@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -51,6 +52,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     TMP_Text RoundText;
 
+    //[SerializeField]
+    //Animator PanelAnimator;
 
     private void Start()
     {
@@ -110,6 +113,9 @@ public class UIManager : MonoBehaviour
         AdjectiveSelected(adjectiveSelector);
         InitializeRound(1);
         LevelText.text = $"Level: {level.ToString()}";
+
+        //PanelAnimator.SetBool("DayStart", true);
+        //PanelAnimator.SetBool("DayEnd", false);
     }
 
     public void SubmitJoke()
@@ -242,5 +248,15 @@ public class UIManager : MonoBehaviour
             VerbImage.sprite = verbSelector.options[verbSelector.value].image;
         }
         submitButton.enabled = false;
+    }
+
+    public void OnPanelIn()
+    {
+        Debug.Log("X");
+    }
+
+    internal void OnPanelOut()
+    {
+        Debug.Log("Y");
     }
 }
