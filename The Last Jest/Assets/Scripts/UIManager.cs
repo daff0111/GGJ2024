@@ -51,16 +51,25 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     TMP_Text RoundText;
 
-    //[SerializeField]
-    //Animator PanelAnimator;
+    [SerializeField]
+    Animator CardAnimator;
 
     [SerializeField]
     float LevelBeginDelay = 2.5f;
 
     [SerializeField]
+    float RoundBeginDelay = 2.5f;
+
+    [SerializeField]
+    float SubmissionDelay = 2.5f;
+
+    [SerializeField]
     TMP_Text announcementText;
     [SerializeField]
     Image announcementBack;
+
+    [SerializeField]
+    Sprite cardBack;
 
     private void Start()
     {
@@ -146,10 +155,21 @@ public class UIManager : MonoBehaviour
 
     public void SubmitJoke()
     {
+        StartCoroutine(SubmitJokeDelayed());
+    }
+
+    IEnumerator SubmitJokeDelayed()
+    {
+        CardAnimator.SetBool("Submit", true);
+
+        yield return new WaitForSeconds(SubmissionDelay);
+
         if (selectedStructure == JokeManager.JokeStructure.SubjectVerbObject)
             jokeManager.SubmitJoke(selectedSubject, selectedVerb, selectedObject);
         else
             jokeManager.SubmitJoke(selectedSubject, selectedAdjective);
+
+        CardAnimator.SetBool("Submit", false);
     }
 
     void SubjectSelected(TMP_Dropdown subjectSelector)
@@ -186,6 +206,15 @@ public class UIManager : MonoBehaviour
 
     public void InitializeRound(int round)
     {
+        StartCoroutine(StartRoundDelayed(round));
+    }
+
+    IEnumerator StartRoundDelayed(int round)
+    {
+        submitButton.enabled = false;
+
+        yield return new WaitForSeconds(RoundBeginDelay);
+
         RoundText.text = $"Round: {round.ToString()}";
 
         verbSelector.gameObject.SetActive(false);
@@ -196,8 +225,6 @@ public class UIManager : MonoBehaviour
         ResetVerb();
         ResetAdjective();
         ResetObject();
-
-        submitButton.enabled = false;
     }
 
     private void ResetObject()
@@ -226,20 +253,20 @@ public class UIManager : MonoBehaviour
 
     private void SetSelectedObject(JokeManager.Noun noun)
     {
-        ComplementImage.sprite = noun != JokeManager.Noun.None ? objectSelector.options[objectSelector.value].image : null;
+        ComplementImage.sprite = noun != JokeManager.Noun.None ? objectSelector.options[objectSelector.value].image : cardBack;
 
         submitButton.enabled = true;
     }
 
     private void SetSelectedAdjective(JokeManager.Adjective adjective)
     {
-        ComplementImage.sprite = adjective != JokeManager.Adjective.None ? adjectiveSelector.options[adjectiveSelector.value].image : null;
+        ComplementImage.sprite = adjective != JokeManager.Adjective.None ? adjectiveSelector.options[adjectiveSelector.value].image : cardBack;
         submitButton.enabled = true;
     }
 
     private void SetSelectedSubject(JokeManager.Noun noun)
     {
-        SubjectImage.sprite = null;
+        SubjectImage.sprite = cardBack;
 
         if (noun != JokeManager.Noun.None)
         {
@@ -252,7 +279,7 @@ public class UIManager : MonoBehaviour
     {
         if (verb == JokeManager.Verb.None)
         {
-            VerbImage.sprite = null;
+            VerbImage.sprite = cardBack;
             objectSelector.gameObject.SetActive(false);
             adjectiveSelector.gameObject.SetActive(false);
         }
