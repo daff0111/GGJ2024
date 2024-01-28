@@ -9,6 +9,8 @@ The Last Jest/[Bb]uild/
 The Last Jest/[Bb]uilds/
 The Last Jest/[Ll]ogs/
 The Last Jest/[Uu]ser[Ss]ettings/
+The Last Jest/Assets/Plugins/FMOD/examples/Metadata/
+*.ogg.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
