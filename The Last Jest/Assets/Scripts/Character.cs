@@ -52,6 +52,8 @@ public class Character : MonoBehaviour
     public VisualEffect AngryEffect;
     public VisualEffect AngryEffect1;
     public VisualEffect HappyEffect;
+    public VisualEffect EmbarrassedEffect;
+    public VisualEffect CryingEffect;
 
     protected float AngryMeter = 50;
     protected CharacterMultiplier Multipliers;
@@ -131,12 +133,8 @@ public class Character : MonoBehaviour
     public virtual void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
         AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
-        if (AngryEffect != null)
-            AngryEffect.enabled = false;
-        if(AngryEffect1 != null)
-            AngryEffect1.enabled = false;
-        if (HappyEffect != null)
-            HappyEffect.enabled = false;
+
+        DisableEffects();
 
         if (!IsRoyalCharacter())
             return;
@@ -151,10 +149,12 @@ public class Character : MonoBehaviour
                 //FaceMesh.material = MaterialNeutralFace;
                 break;
             case EEmotionType.Crying:
-                //FaceMesh.material = MaterialCryingFace;
+                if (CryingEffect != null)
+                    CryingEffect.enabled = true;
                 break;
             case EEmotionType.Embarrassed:
-                //FaceMesh.material = MaterialEmbarrassedFace;
+                if (EmbarrassedEffect != null)
+                    EmbarrassedEffect.enabled = true;
                 break;
             case EEmotionType.Angry:
                 if (AngryEffect)
@@ -191,5 +191,19 @@ public class Character : MonoBehaviour
     public void SetMultipliers(CharacterMultiplier newMultiplier)
     {
         Multipliers = newMultiplier;
+    }
+
+    void DisableEffects()
+    {
+        if (AngryEffect != null)
+            AngryEffect.enabled = false;
+        if(AngryEffect1 != null)
+            AngryEffect1.enabled = false;
+        if (HappyEffect != null)
+            HappyEffect.enabled = false;
+        if (EmbarrassedEffect != null)
+            EmbarrassedEffect.enabled = false;
+        if (CryingEffect != null)
+            CryingEffect.enabled = false;
     }
 }
