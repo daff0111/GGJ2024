@@ -661,7 +661,7 @@ public class JokeManager : MonoBehaviour
             default:
                 break;
         }
-        UIManagerObject.InitializeOptions(level);
+        UIManagerObject.StartLevel(level);
     }
 
     void SetMultipliersForCharacters(CharacterMultipliersSet multiplierSet)
