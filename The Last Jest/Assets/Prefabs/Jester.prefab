@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.000039999482
+      value: -0.0001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.02244
+      value: -0.0232
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5a6c0358edfef74f8c0c26fd5cc22ea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Height
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3535140963988838187, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Name
       value: Jester
@@ -256,6 +260,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5249831986391005457, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_RendererPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961927632131127624, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7394333855162516389, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
