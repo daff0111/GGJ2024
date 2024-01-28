@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7f338f18-7566-43a3-b55c-eccbe41aaf2a}">
+		<property name="assetPath">
+			<value>Heir_Sad1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8b946a3c-46de-4bc8-89f9-428c7c880fff}</destination>
+		</relationship>
+	</object>
+</objects>
