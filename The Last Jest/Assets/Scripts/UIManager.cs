@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -64,12 +65,24 @@ public class UIManager : MonoBehaviour
     float SubmissionDelay = 2.5f;
 
     [SerializeField]
+    float gameOverDelay = 2.5f;
+
+    [SerializeField]
     TMP_Text announcementText;
     [SerializeField]
     Image announcementBack;
 
     [SerializeField]
     Sprite cardBack;
+
+    [SerializeField]
+    GameObject gameOverPanel;
+    [SerializeField]
+    TMP_Text gameOverText;
+    [SerializeField]
+    TMP_Text jokeCountText;
+    [SerializeField]
+    Button playAgain;
 
     private void Start()
     {
@@ -156,6 +169,7 @@ public class UIManager : MonoBehaviour
         objectSelector.enabled = false;
         verbSelector.enabled = false;
         adjectiveSelector.enabled = false;
+        submitButton.enabled = false;
 
         StartCoroutine(SubmitJokeDelayed());
     }
@@ -171,7 +185,7 @@ public class UIManager : MonoBehaviour
         else
             jokeManager.SubmitJoke(selectedSubject, selectedAdjective);
 
-        CardAnimator.SetBool("Submit", false);
+        subjectSelector.enabled = true;
     }
 
     void SubjectSelected(TMP_Dropdown subjectSelector)
@@ -179,6 +193,8 @@ public class UIManager : MonoBehaviour
         selectedSubject = (JokeManager.Noun)Enum.Parse( typeof(JokeManager.Noun), subjectSelector.options[subjectSelector.value].text);
 
         SetSelectedSubject(selectedSubject);
+
+        verbSelector.enabled = true;
     }
     void VerbSelected(TMP_Dropdown verbSelector)
     {
@@ -291,12 +307,14 @@ public class UIManager : MonoBehaviour
             {
                 selectedStructure = JokeManager.JokeStructure.SubjectIsAdjective;
                 adjectiveSelector.gameObject.SetActive(true);
+                adjectiveSelector.enabled = true;
                 objectSelector.gameObject.SetActive(false);
             }
             else
             {
                 selectedStructure = JokeManager.JokeStructure.SubjectVerbObject;
                 objectSelector.gameObject.SetActive(true);
+                objectSelector.enabled = true;
                 adjectiveSelector.gameObject.SetActive(false);
             }
 
@@ -313,5 +331,26 @@ public class UIManager : MonoBehaviour
     internal void OnPanelOut()
     {
         Debug.Log("Y");
+    }
+
+    public void HandleGameOver(bool died, int jokesTold)
+    {
+        StartCoroutine(HandleGameOverDelayed(died, jokesTold));
+    }
+
+    IEnumerator HandleGameOverDelayed(bool died, int jokesTold)
+    {
+        panel.SetActive(false);
+
+        yield return new WaitForSeconds(gameOverDelay);
+        
+        gameOverPanel.SetActive(true);
+        gameOverText.text = died ? "YOU DIED" : "YOU WON";
+        jokeCountText.text = $"YOU TOLD {jokesTold} JOKES";
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }

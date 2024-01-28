@@ -83,21 +83,6 @@ public class JokeManager : MonoBehaviour
         StartLevel(1);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (GameOver)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                // Reload Game
-                string currentSceneName = SceneManager.GetActiveScene().name;
-                SceneManager.LoadScene(currentSceneName);
-            }
-            return;
-        }
-    }
-
     void TellJoke()
     {
         JokeCount++;
@@ -113,7 +98,7 @@ public class JokeManager : MonoBehaviour
         if (King.GetAngryMeter() <= 0) 
         {
             // You Died - King Orders your death
-            EndGame();
+            KillJester();
 
         }
 
@@ -121,13 +106,13 @@ public class JokeManager : MonoBehaviour
         {
             // You Died - The Executioner is angry and he kills you
             Executioner.RevealAngryFace();
-            EndGame();
+            KillJester();
         }
 
         if(Queen.GetAngryMeter() <= 0)
         {
             // You Died - Queen Orders your death. Maybe do something different?
-            EndGame();
+            KillJester();
         }
 
         if (Audience.GetAngryMeter() <= 0)
@@ -152,6 +137,7 @@ public class JokeManager : MonoBehaviour
         {
             GameOver = true;
             Debug.Log("YOU WON - You told " + JokeCount + " Jokes. Press 'R' to Restart");
+            UIManagerObject.HandleGameOver(false, JokeCount);
         }
     }
 
@@ -635,11 +621,12 @@ public class JokeManager : MonoBehaviour
         TellJoke();
     }
 
-    void EndGame()
+    void KillJester()
     {
         StartCoroutine(Executioner.KillJester());
         GameOver = true;
         Debug.Log("YOU DIED - You told " + JokeCount + " Jokes. Press 'R' to Restart");
+        UIManagerObject.HandleGameOver(true, JokeCount);
     }
 
     void StartLevel(int level)
