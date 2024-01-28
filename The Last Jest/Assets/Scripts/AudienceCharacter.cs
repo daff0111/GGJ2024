@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class AudienceCharacter : Character
 {
     public Character[] audienceCharacters;
+    [Header("Audio Effects")]
+    public StudioEventEmitter AngryAudienceSound;
+    public StudioEventEmitter HappyAudienceSound;
+    public StudioEventEmitter ClappingAudienceSound;
 
     protected override void Start()
     {
@@ -24,21 +29,34 @@ public class AudienceCharacter : Character
         {
             aCharacter.SetAngryMeter(GetAngryMeter());
         }
+        if(AngryAudienceSound)
+            AngryAudienceSound.Stop();
+        if(HappyAudienceSound)
+            HappyAudienceSound.Stop();
+        if(ClappingAudienceSound)
+            ClappingAudienceSound.Stop();
         // Add Sound Effects
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
+                if(HappyAudienceSound)
+                    HappyAudienceSound.Play();
                 break;
             case EEmotionType.Neutral:
-                //FaceMesh.material = MaterialNeutralFace;
+                if(ClappingAudienceSound)
+                    ClappingAudienceSound.Play();
                 break;
             case EEmotionType.Crying:
-                //FaceMesh.material = MaterialCryingFace;
+                if(AngryAudienceSound)
+                    AngryAudienceSound.Play();
                 break;
             case EEmotionType.Embarrassed:
-                //FaceMesh.material = MaterialEmbarrassedFace;
+                if(ClappingAudienceSound)
+                    ClappingAudienceSound.Play();
                 break;
             case EEmotionType.Angry:
+                if(AngryAudienceSound)
+                    AngryAudienceSound.Play();
                 break;
             default:
                 break;
