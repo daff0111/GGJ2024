@@ -156,7 +156,7 @@ public class JokeManager : MonoBehaviour
 
     private void StartNextRound()
     {
-        UIManagerObject.InitializeRound();
+        UIManagerObject.InitializeRound(JokeCount % 3 + 1);
     }
 
     public void SubmitJoke(Noun subject, Verb verb, Noun jokeObject)

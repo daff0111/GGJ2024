@@ -45,6 +45,12 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Image ComplementImage;
 
+    [SerializeField]
+    TMP_Text LevelText;
+
+    [SerializeField]
+    TMP_Text RoundText;
+
 
     private void Start()
     {
@@ -102,7 +108,8 @@ public class UIManager : MonoBehaviour
         adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
 
         AdjectiveSelected(adjectiveSelector);
-        InitializeRound();
+        InitializeRound(1);
+        LevelText.text = $"Level: {level.ToString()}";
     }
 
     public void SubmitJoke()
@@ -145,8 +152,10 @@ public class UIManager : MonoBehaviour
         ShowHideText.text = panel.activeInHierarchy ? "/\\" : "\\/";
     }
 
-    public void InitializeRound()
+    public void InitializeRound(int round)
     {
+        RoundText.text = $"Round: {round.ToString()}";
+
         verbSelector.gameObject.SetActive(false);
         objectSelector.gameObject.SetActive(false);
         adjectiveSelector.gameObject.SetActive(false);
@@ -198,9 +207,13 @@ public class UIManager : MonoBehaviour
 
     private void SetSelectedSubject(JokeManager.Noun noun)
     {
-        SubjectImage.sprite = noun != JokeManager.Noun.None ? subjectSelector.options[subjectSelector.value].image : null;
+        SubjectImage.sprite = null;
 
-        verbSelector.gameObject.SetActive(true);
+        if (noun != JokeManager.Noun.None)
+        {
+            SubjectImage.sprite = subjectSelector.options[subjectSelector.value].image;
+            verbSelector.gameObject.SetActive(true);
+        }
     }
 
     private void SetSelectedVerb(JokeManager.Verb verb)
