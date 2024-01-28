@@ -228,11 +228,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 386305550579943144, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1542681125428726659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_text
       value: Jester
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719969113781781777, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Height
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Name
@@ -300,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.469
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalRotation.w
@@ -344,6 +348,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2067845542932256396}
+    - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1815594902391808412}
     - targetCorrespondingSourceObject: {fileID: 1015489652454595666, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 268212847894768738}
@@ -436,5 +443,34 @@ MonoBehaviour:
   AngryEffect: {fileID: 0}
   AngryEffect1: {fileID: 0}
   HappyEffect: {fileID: 0}
+  EmbarrassedEffect: {fileID: 0}
+  CryingEffect: {fileID: 0}
   Head: {fileID: 268212847894768738}
   BloodSplatter: {fileID: 1355669126277967852}
+--- !u!54 &1815594902391808412
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592874230459743236}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

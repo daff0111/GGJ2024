@@ -14,5 +14,7 @@ public class JesterCharacter : Character
         Head.useGravity = true;
         Head.AddForce(transform.right * 100);
         BloodSplatter.enabled = true;
+        GetComponent<Rigidbody>().useGravity = true;
+        GetComponent<Rigidbody>().AddForce(transform.forward * -10);
     }
 }

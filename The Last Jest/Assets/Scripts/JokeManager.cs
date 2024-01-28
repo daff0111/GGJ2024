@@ -637,7 +637,7 @@ public class JokeManager : MonoBehaviour
 
     void EndGame()
     {
-        Executioner.KillJester();
+        StartCoroutine(Executioner.KillJester());
         GameOver = true;
         Debug.Log("YOU DIED - You told " + JokeCount + " Jokes. Press 'R' to Restart");
     }
