@@ -126,7 +126,8 @@ public class JokeManager : MonoBehaviour
 
         if(Queen.GetAngryMeter() <= 0)
         {
-            // Queen is Angry - next day she'll be in the executioner place
+            // You Died - Queen Orders your death. Maybe do something different?
+            EndGame();
         }
 
         if (Audience.GetAngryMeter() <= 0)
@@ -172,7 +173,7 @@ public class JokeManager : MonoBehaviour
         if (characterSubject == null)
         {
             // Bad Joke
-            King.AddEmotionReaction(EEmotionType.Neutral);
+            King.AddEmotionReaction(EEmotionType.Angry);
             Queen.AddEmotionReaction(EEmotionType.Neutral);
             Heir.AddEmotionReaction(EEmotionType.Neutral);
             Executioner.AddEmotionReaction(EEmotionType.Neutral);
@@ -197,7 +198,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Happy);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Embarrassed);
                     // Heir is not ammused
                     if(characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -214,7 +215,7 @@ public class JokeManager : MonoBehaviour
                         if (characterSubject != King)
                             King.AddEmotionReaction(EEmotionType.Happy);
                         if (characterSubject != Queen)
-                            Queen.AddEmotionReaction(EEmotionType.Happy);
+                            Queen.AddEmotionReaction(EEmotionType.Embarrassed);
                         if (characterSubject != Heir)
                             Heir.AddEmotionReaction(EEmotionType.Happy);
                         if (characterSubject != Executioner)
@@ -260,9 +261,9 @@ public class JokeManager : MonoBehaviour
                     // King is not ammused
                     if (characterSubject != King && characterObject != King)
                         King.AddEmotionReaction(EEmotionType.Neutral);
-                    // Queen is not ammused
+                    // Queen is Happy
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Happy);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -285,7 +286,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Happy);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Embarrassed);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -305,7 +306,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Neutral);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Angry);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -325,7 +326,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Neutral);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Happy);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -342,7 +343,7 @@ public class JokeManager : MonoBehaviour
                         if (characterSubject != King)
                             King.AddEmotionReaction(EEmotionType.Happy);
                         if (characterSubject != Queen)
-                            Queen.AddEmotionReaction(EEmotionType.Happy);
+                            Queen.AddEmotionReaction(EEmotionType.Embarrassed);
                         if (characterSubject != Heir)
                             Heir.AddEmotionReaction(EEmotionType.Happy);
                         if (characterSubject != Executioner)
@@ -351,7 +352,7 @@ public class JokeManager : MonoBehaviour
                     else
                     {
                         // Bad Joke
-                        King.AddEmotionReaction(EEmotionType.Neutral);
+                        King.AddEmotionReaction(EEmotionType.Angry);
                         Queen.AddEmotionReaction(EEmotionType.Neutral);
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
                         Executioner.AddEmotionReaction(EEmotionType.Neutral);
@@ -393,7 +394,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Neutral);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Angry);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -413,7 +414,7 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Neutral);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Happy);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -433,13 +434,13 @@ public class JokeManager : MonoBehaviour
                         King.AddEmotionReaction(EEmotionType.Neutral);
                     // Queen is not ammused
                     if (characterSubject != Queen && characterObject != Queen)
-                        Queen.AddEmotionReaction(EEmotionType.Neutral);
+                        Queen.AddEmotionReaction(EEmotionType.Crying);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
                         Heir.AddEmotionReaction(EEmotionType.Neutral);
                     // Executioner is embarrassed
                     if (characterSubject != Executioner && characterObject != Executioner)
-                        Executioner.AddEmotionReaction(EEmotionType.Embarrassed);
+                        Executioner.AddEmotionReaction(EEmotionType.Happy);
                 }
                 if (verb == Verb.Serves)
                 {
@@ -456,7 +457,7 @@ public class JokeManager : MonoBehaviour
                         Queen.AddEmotionReaction(EEmotionType.Neutral);
                     // Heir is not ammused
                     if (characterSubject != Heir && characterObject != Heir)
-                        Heir.AddEmotionReaction(EEmotionType.Neutral);
+                        Heir.AddEmotionReaction(EEmotionType.Happy);
                     // Executioner is not ammused
                     if (characterSubject != Executioner && characterObject != Executioner)
                         Executioner.AddEmotionReaction(EEmotionType.Neutral);
@@ -468,7 +469,7 @@ public class JokeManager : MonoBehaviour
                         characterSubject.AddEmotionReaction(EEmotionType.Embarrassed, 1);
                         Audience.AddEmotionReaction(EEmotionType.Happy, 1);
                         if (characterSubject != King)
-                            King.AddEmotionReaction(EEmotionType.Happy);
+                            King.AddEmotionReaction(EEmotionType.Angry);
                         if (characterSubject != Queen)
                             Queen.AddEmotionReaction(EEmotionType.Happy);
                         if (characterSubject != Heir)
@@ -505,7 +506,7 @@ public class JokeManager : MonoBehaviour
         if (characterSubject == null)
         {
             // Bad Joke
-            King.AddEmotionReaction(EEmotionType.Neutral);
+            King.AddEmotionReaction(EEmotionType.Angry);
             Queen.AddEmotionReaction(EEmotionType.Neutral);
             Heir.AddEmotionReaction(EEmotionType.Neutral);
             Executioner.AddEmotionReaction(EEmotionType.Neutral);
@@ -528,7 +529,7 @@ public class JokeManager : MonoBehaviour
                 }
                 // King is not ammused
                 if (characterSubject != King)
-                    King.AddEmotionReaction(EEmotionType.Neutral);
+                    King.AddEmotionReaction(EEmotionType.Happy);
                 // Queen is not ammused
                 if (characterSubject != Queen)
                     Queen.AddEmotionReaction(EEmotionType.Neutral);
@@ -570,7 +571,7 @@ public class JokeManager : MonoBehaviour
                     King.AddEmotionReaction(EEmotionType.Neutral);
                 // Queen is not ammused
                 if (characterSubject != Queen)
-                    Queen.AddEmotionReaction(EEmotionType.Neutral);
+                    Queen.AddEmotionReaction(EEmotionType.Happy);
                 // Heir is not ammused
                 if (characterSubject != Heir)
                     Heir.AddEmotionReaction(EEmotionType.Neutral);
@@ -622,7 +623,7 @@ public class JokeManager : MonoBehaviour
                     Queen.AddEmotionReaction(EEmotionType.Neutral);
                 // Heir is not ammused
                 if (characterSubject != Heir)
-                    Heir.AddEmotionReaction(EEmotionType.Neutral);
+                    Heir.AddEmotionReaction(EEmotionType.Happy);
                 // Executioner is not ammused
                 if (characterSubject != Executioner)
                     Executioner.AddEmotionReaction(EEmotionType.Neutral);

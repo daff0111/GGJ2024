@@ -108,7 +108,7 @@ public class Character : MonoBehaviour
 
     bool IsRoyalCharacter()
     {
-        return CharacterType != ECharacterType.Jester && CharacterType != ECharacterType.None && CharacterType != ECharacterType.Executioner;
+        return CharacterType != ECharacterType.Jester && CharacterType != ECharacterType.None;
     }
 
     void UpdateCharacterText()
@@ -175,7 +175,7 @@ public class Character : MonoBehaviour
             case EEmotionType.Happy:
                 return 10 * Multipliers.HappyMultiplier;
             case EEmotionType.Neutral:
-                return 0;
+                return -5;
             case EEmotionType.Embarrassed:
                 return -10 * Multipliers.EmbarrassedMultiplier;
             case EEmotionType.Crying:

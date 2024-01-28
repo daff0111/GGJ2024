@@ -13,16 +13,21 @@ public class AudienceCharacter : Character
         foreach (Character aCharacter in audienceCharacters)
         {
             aCharacter.StartingAngryMeter = StartingAngryMeter;
+            aCharacter.CharacterType = ECharacterType.Audience;
         }
     }
 
     public override void AddEmotionReaction(EEmotionType emotionReaction, float multiplier = 1)
     {
-        AddAngryMeter(GetReactionMeter(emotionReaction) * multiplier);
+        base.AddEmotionReaction(emotionReaction, multiplier);
+        foreach (Character aCharacter in audienceCharacters)
+        {
+            aCharacter.SetAngryMeter(GetAngryMeter());
+        }
+        // Add Sound Effects
         switch (emotionReaction)
         {
             case EEmotionType.Happy:
-                //FaceMesh.material = MaterialHappyFace;
                 break;
             case EEmotionType.Neutral:
                 //FaceMesh.material = MaterialNeutralFace;
@@ -34,14 +39,9 @@ public class AudienceCharacter : Character
                 //FaceMesh.material = MaterialEmbarrassedFace;
                 break;
             case EEmotionType.Angry:
-                //FaceMesh.material = MaterialAngryFace;
                 break;
             default:
                 break;
-        }
-        foreach (Character aCharacter in audienceCharacters)
-        {
-            aCharacter.SetAngryMeter(GetAngryMeter());
         }
     }
 }
