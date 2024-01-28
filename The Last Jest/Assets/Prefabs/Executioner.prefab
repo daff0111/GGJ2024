@@ -403,6 +403,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3298682442493605822}
+    - targetCorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015538561574168588}
   m_SourcePrefab: {fileID: 100100000, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
 --- !u!2083052967 &1613558929729847317 stripped
 VisualEffect:
@@ -456,3 +459,35 @@ MonoBehaviour:
   CryingEffect: {fileID: 7659902430874732907}
   ExecutionerAxe: {fileID: 2632496871537718985}
   Jester: {fileID: 0}
+  KillSound: {fileID: 2015538561574168588}
+--- !u!114 &2015538561574168588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -724212172
+      Data2: 1105088447
+      Data3: -346302561
+      Data4: 198112739
+    Path: event:/Jester_dies/Death
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
