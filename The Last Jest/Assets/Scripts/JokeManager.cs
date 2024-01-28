@@ -653,6 +653,7 @@ public class JokeManager : MonoBehaviour
                 break;
             case 2:
                 SetMultipliersForCharacters(Level2MultiplierSet);
+                Heir.AddEmotionReaction(EEmotionType.Crying); // Bunny Died
                 break;
             case 3:
                 SetMultipliersForCharacters(Level3MultiplierSet);
@@ -665,11 +666,17 @@ public class JokeManager : MonoBehaviour
 
     void SetMultipliersForCharacters(CharacterMultipliersSet multiplierSet)
     {
+        const float recoveryMeter = 5;
         King.SetMultipliers(multiplierSet.KingMultiplier);
+        King.AddAngryMeter(recoveryMeter);
         Queen.SetMultipliers(multiplierSet.QueenMultiplier);
+        Queen.AddAngryMeter(recoveryMeter);
         Heir.SetMultipliers(multiplierSet.HeirMultiplier);
+        Heir.AddAngryMeter(recoveryMeter);
         Audience.SetMultipliers(multiplierSet.AudienceMultiplier);
+        Audience.AddAngryMeter(recoveryMeter);
         Executioner.SetMultipliers(multiplierSet.ExecutionerMultiplier);
+        Executioner.AddAngryMeter(recoveryMeter);
     }
 
     Character GetCharacterWithNoun(Noun characterNoun)
