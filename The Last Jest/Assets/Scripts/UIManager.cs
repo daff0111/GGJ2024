@@ -148,19 +148,21 @@ public class UIManager : MonoBehaviour
         AdjectiveSelected(adjectiveSelector);
         InitializeRound(1);
         LevelText.text = $"Level: {level.ToString()}";
-
-        //PanelAnimator.SetBool("DayStart", true);
-        //PanelAnimator.SetBool("DayEnd", false);
     }
 
     public void SubmitJoke()
     {
+        subjectSelector.enabled = false;
+        objectSelector.enabled = false;
+        verbSelector.enabled = false;
+        adjectiveSelector.enabled = false;
+
         StartCoroutine(SubmitJokeDelayed());
     }
 
     IEnumerator SubmitJokeDelayed()
     {
-        CardAnimator.SetBool("Submit", true);
+        CardAnimator.SetTrigger("Submit");
 
         yield return new WaitForSeconds(SubmissionDelay);
 
