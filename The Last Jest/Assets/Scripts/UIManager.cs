@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static JokeManager;
 
 public class UIManager : MonoBehaviour
 {
@@ -84,6 +86,13 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Button playAgain;
 
+    
+    [SerializeField]
+    StudioEventEmitter pigEvent;
+    [SerializeField]
+    StudioEventEmitter foodEvent;
+    [SerializeField]
+    StudioEventEmitter smallEvent;
     private void Start()
     {
 
@@ -285,12 +294,35 @@ public class UIManager : MonoBehaviour
     {
         ComplementImage.sprite = noun != JokeManager.Noun.None ? objectSelector.options[objectSelector.value].image : cardBack;
 
+        PlayNounAudio(noun);
+
         submitButton.enabled = true;
+    }
+
+    private void PlayNounAudio(JokeManager.Noun noun)
+    {
+        switch (noun)
+        {
+            case JokeManager.Noun.Food:
+                foodEvent.Play();
+                break;
+        }
     }
 
     private void SetSelectedAdjective(JokeManager.Adjective adjective)
     {
         ComplementImage.sprite = adjective != JokeManager.Adjective.None ? adjectiveSelector.options[adjectiveSelector.value].image : cardBack;
+
+        switch(adjective)
+        {
+            case JokeManager.Adjective.Pig:
+                pigEvent.Play();
+                break;
+            case JokeManager.Adjective.Small:
+                smallEvent.Play();
+                break;
+        }    
+
         submitButton.enabled = true;
     }
 
@@ -301,6 +333,7 @@ public class UIManager : MonoBehaviour
         if (noun != JokeManager.Noun.None)
         {
             SubjectImage.sprite = subjectSelector.options[subjectSelector.value].image;
+            PlayNounAudio(noun);
             verbSelector.gameObject.SetActive(true);
         }
     }
