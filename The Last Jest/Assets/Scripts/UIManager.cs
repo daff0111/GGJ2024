@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,9 +54,36 @@ public class UIManager : MonoBehaviour
     //[SerializeField]
     //Animator PanelAnimator;
 
+    [SerializeField]
+    float LevelBeginDelay = 2.5f;
+
+    [SerializeField]
+    TMP_Text announcementText;
+    [SerializeField]
+    Image announcementBack;
+
     private void Start()
     {
 
+    }
+
+    public void StartLevel(int level)
+    {
+        StartCoroutine(StartLevelDelayed(level));
+    }
+
+    IEnumerator StartLevelDelayed(int level)
+    {
+        panel.SetActive(false);
+        announcementBack.gameObject.SetActive(true);
+        announcementText.text = $"Day {level}";
+
+        yield return new WaitForSeconds(LevelBeginDelay);
+
+        announcementBack.gameObject.SetActive(false);
+
+        panel.SetActive(true);
+        InitializeOptions(level);
     }
 
     public void InitializeOptions(int level)
