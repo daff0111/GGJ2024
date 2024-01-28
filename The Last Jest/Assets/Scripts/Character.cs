@@ -53,6 +53,7 @@ public class Character : MonoBehaviour
     public VisualEffect AngryEffect1;
     public VisualEffect HappyEffect;
     public VisualEffect EmbarrassedEffect;
+    public VisualEffect EmbarrassedEffect1;
     public VisualEffect CryingEffect;
 
     protected float AngryMeter = 50;
@@ -155,6 +156,8 @@ public class Character : MonoBehaviour
             case EEmotionType.Embarrassed:
                 if (EmbarrassedEffect != null)
                     EmbarrassedEffect.enabled = true;
+                if(EmbarrassedEffect1 != null)
+                    EmbarrassedEffect1.enabled = true;
                 break;
             case EEmotionType.Angry:
                 if (AngryEffect)
@@ -203,6 +206,8 @@ public class Character : MonoBehaviour
             HappyEffect.enabled = false;
         if (EmbarrassedEffect != null)
             EmbarrassedEffect.enabled = false;
+        if (EmbarrassedEffect1 != null)
+            EmbarrassedEffect1.enabled = false;
         if (CryingEffect != null)
             CryingEffect.enabled = false;
     }

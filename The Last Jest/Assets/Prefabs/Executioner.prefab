@@ -128,9 +128,29 @@ PrefabInstance:
       propertyPath: m_text
       value: Executioner
       objectReference: {fileID: 0}
+    - target: {fileID: 2260214337884671972, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Asset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822886070912607138, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2856943021061274536, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226066979026804211, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226066979026804211, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226066979026804211, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4360009118734025850, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,6 +221,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: e8bcaa3a6c32af649a8f52295a14be59, type: 2}
     - target: {fileID: 6558670481537460956, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679324128366480007, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -363,6 +387,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 5575904121578613449}
   m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &7659902430874732907 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 2822886070912607138, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!2083052967 &7693399184136147297 stripped
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 2856943021061274536, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -390,5 +419,8 @@ MonoBehaviour:
   AngryEffect: {fileID: 7693399184136147297}
   AngryEffect1: {fileID: 1613558929729847317}
   HappyEffect: {fileID: 2735195129307708101}
+  EmbarrassedEffect: {fileID: 0}
+  EmbarrassedEffect1: {fileID: 0}
+  CryingEffect: {fileID: 7659902430874732907}
   ExecutionerAxe: {fileID: 2632496871537718985}
   Jester: {fileID: 0}
