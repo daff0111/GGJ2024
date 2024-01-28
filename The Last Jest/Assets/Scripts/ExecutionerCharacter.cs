@@ -7,6 +7,7 @@ public class ExecutionerCharacter : Character
 {
     public GameObject ExecutionerAxe;
     public JesterCharacter Jester;
+    public Animator JesterAnimator;
     public StudioEventEmitter KillSound;
 
     public IEnumerator KillJester()
@@ -18,6 +19,8 @@ public class ExecutionerCharacter : Character
         ExecutionerAxe.transform.rotation = Quaternion.Euler(0, 0, -80);
         ExecutionerAxe.transform.localPosition = new Vector3(-0.1f, 0.6f, -0.475f);
         Jester.DropHead();
+        if (JesterAnimator)
+            JesterAnimator.SetBool("Died", true);
     }
 
     public void PrepareKill(bool prepare)

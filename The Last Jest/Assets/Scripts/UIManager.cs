@@ -93,6 +93,18 @@ public class UIManager : MonoBehaviour
     StudioEventEmitter foodEvent;
     [SerializeField]
     StudioEventEmitter smallEvent;
+    [SerializeField]
+    StudioEventEmitter isEvent;
+    [SerializeField]
+    StudioEventEmitter fartsEvent;
+    [SerializeField]
+    StudioEventEmitter hatesEvent;
+    [SerializeField]
+    StudioEventEmitter killsEvent;
+    [SerializeField]
+    StudioEventEmitter lovesEvent;
+    [SerializeField]
+    StudioEventEmitter servesEvent;
     private void Start()
     {
 
@@ -354,6 +366,7 @@ public class UIManager : MonoBehaviour
                 adjectiveSelector.gameObject.SetActive(true);
                 adjectiveSelector.enabled = true;
                 objectSelector.gameObject.SetActive(false);
+                isEvent.Play();
             }
             else
             {
@@ -361,11 +374,28 @@ public class UIManager : MonoBehaviour
                 objectSelector.gameObject.SetActive(true);
                 objectSelector.enabled = true;
                 adjectiveSelector.gameObject.SetActive(false);
+                PlayVerbAudio(verb);
             }
 
             VerbImage.sprite = verbSelector.options[verbSelector.value].image;
         }
         submitButton.enabled = false;
+    }
+
+    private void PlayVerbAudio(Verb verb)
+    {
+        switch(verb)
+        {
+            case Verb.Farts:
+                fartsEvent.Play();
+                break;
+            case Verb.Hates:
+                hatesEvent.Play();
+                break; 
+            case Verb.Kills: killsEvent.Play(); break;
+            case Verb.Loves: lovesEvent.Play(); break;
+            case Verb.Serves: servesEvent.Play(); break;
+        }
     }
 
     public void OnPanelIn()
