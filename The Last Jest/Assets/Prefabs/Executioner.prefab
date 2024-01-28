@@ -128,6 +128,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Executioner
       objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Executioner_Angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -301789365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1075679940
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 499511963
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -955099202
+      objectReference: {fileID: 0}
     - target: {fileID: 2260214337884671972, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Asset
       value: 
@@ -135,6 +163,34 @@ PrefabInstance:
     - target: {fileID: 2260214337884671972, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Executioner_Happy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 18769716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1084615144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -43806316
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 575599635
       objectReference: {fileID: 0}
     - target: {fileID: 2822886070912607138, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
@@ -155,6 +211,34 @@ PrefabInstance:
     - target: {fileID: 3226066979026804211, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Executioner_Embarrassed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 939918798
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1188372526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -1343042679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 606792139
       objectReference: {fileID: 0}
     - target: {fileID: 4360009118734025850, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
@@ -259,6 +343,34 @@ PrefabInstance:
     - target: {fileID: 7535870435235713036, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Executioner_Sad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 1350617555
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1258476875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 794834071
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -591577361
       objectReference: {fileID: 0}
     - target: {fileID: 8037244791023188053, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,11 +519,33 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2015538561574168588}
   m_SourcePrefab: {fileID: 100100000, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+--- !u!114 &438002697236306917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!2083052967 &1613558929729847317 stripped
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 6558670481537460956, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 5575904121578613449}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2373715763719152698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!2083052967 &2735195129307708101 stripped
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 7535870435235713036, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -422,6 +556,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8716187634876933159, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 5575904121578613449}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6108514572444474327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!2083052967 &7659902430874732907 stripped
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 2822886070912607138, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -432,6 +577,28 @@ VisualEffect:
   m_CorrespondingSourceObject: {fileID: 2856943021061274536, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 5575904121578613449}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7860309310297482905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8164945800542224481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 5575904121578613449}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262023083105222044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8262023083105222044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -457,6 +624,11 @@ MonoBehaviour:
   EmbarrassedEffect: {fileID: 0}
   EmbarrassedEffect1: {fileID: 0}
   CryingEffect: {fileID: 7659902430874732907}
+  AngrySound: {fileID: 6108514572444474327}
+  HappySound: {fileID: 7860309310297482905}
+  EmbarrassedSound: {fileID: 8164945800542224481}
+  CryingSound: {fileID: 2373715763719152698}
+  NeutralSound: {fileID: 438002697236306917}
   ExecutionerAxe: {fileID: 2632496871537718985}
   Jester: {fileID: 0}
   KillSound: {fileID: 2015538561574168588}

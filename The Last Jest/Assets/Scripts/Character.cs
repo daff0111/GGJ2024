@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.VFX;
+using FMODUnity;
 
 public enum EEmotionType
 {
@@ -48,13 +49,19 @@ public class Character : MonoBehaviour
     public float StartingAngryMeter = 50;
 
     SkinnedMeshModifier headModifier;
-    [Header("Effects")]
+    [Header("Visual Effects")]
     public VisualEffect AngryEffect;
     public VisualEffect AngryEffect1;
     public VisualEffect HappyEffect;
     public VisualEffect EmbarrassedEffect;
     public VisualEffect EmbarrassedEffect1;
     public VisualEffect CryingEffect;
+    [Header("Audio Effects")]
+    public StudioEventEmitter AngrySound;
+    public StudioEventEmitter HappySound;
+    public StudioEventEmitter EmbarrassedSound;
+    public StudioEventEmitter CryingSound;
+    public StudioEventEmitter NeutralSound;
 
     protected float AngryMeter = 50;
     protected CharacterMultiplier Multipliers;
@@ -145,25 +152,34 @@ public class Character : MonoBehaviour
             case EEmotionType.Happy:
                 if (HappyEffect)
                     HappyEffect.enabled = true;
+                if(HappySound)
+                    HappySound.Play();
                 break;
             case EEmotionType.Neutral:
-                //FaceMesh.material = MaterialNeutralFace;
+                if(NeutralSound)
+                    NeutralSound.Play();
                 break;
             case EEmotionType.Crying:
                 if (CryingEffect != null)
                     CryingEffect.enabled = true;
+                if(CryingSound)
+                    CryingSound.Play();
                 break;
             case EEmotionType.Embarrassed:
                 if (EmbarrassedEffect != null)
                     EmbarrassedEffect.enabled = true;
                 if(EmbarrassedEffect1 != null)
                     EmbarrassedEffect1.enabled = true;
+                if(EmbarrassedSound)
+                    EmbarrassedSound.Play();
                 break;
             case EEmotionType.Angry:
                 if (AngryEffect)
                     AngryEffect.enabled = true;
                 if (AngryEffect1)
                     AngryEffect1.enabled = true;
+                if(AngrySound)
+                    AngrySound.Play();
                 break;
             default:
                 break;
@@ -210,5 +226,15 @@ public class Character : MonoBehaviour
             EmbarrassedEffect1.enabled = false;
         if (CryingEffect != null)
             CryingEffect.enabled = false;
+        if(AngrySound)
+            AngrySound.Stop();
+        if(HappySound)
+            HappySound.Stop();
+        if(CryingSound)
+            CryingSound.Stop();
+        if(EmbarrassedSound)
+            EmbarrassedSound.Stop();
+        if(NeutralSound)
+            NeutralSound.Stop();
     }
 }

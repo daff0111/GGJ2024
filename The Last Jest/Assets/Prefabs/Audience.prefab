@@ -8,9 +8,129 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: PlayEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Audience/Audience_Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 319876554
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1247329636
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 29366423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 484051308
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Audience/Audience_Happy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 286808139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1127020721
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -581556593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -852257707
+      objectReference: {fileID: 0}
     - target: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Name
       value: Audience
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Audience/Audience_Angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 538771556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1296163204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 253316492
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1437076479
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Audience/Audience_Laugh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 1093920735
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1157775965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 2095693206
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -93878940
       objectReference: {fileID: 0}
     - target: {fileID: 8037244791023188053, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,6 +186,17 @@ VisualEffect:
   m_CorrespondingSourceObject: {fileID: 2856943021061274536, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 58577317057186235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4395014547004564243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 58577317057186235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546690294071090926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4546690294071090926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4596219711385245525, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -88,7 +219,29 @@ MonoBehaviour:
   AngryEffect: {fileID: 2843457225819009555}
   AngryEffect1: {fileID: 6617212612813235047}
   HappyEffect: {fileID: 7513360947927390647}
+  EmbarrassedEffect: {fileID: 0}
+  EmbarrassedEffect1: {fileID: 0}
+  CryingEffect: {fileID: 0}
+  AngrySound: {fileID: 0}
+  HappySound: {fileID: 0}
+  EmbarrassedSound: {fileID: 0}
+  CryingSound: {fileID: 0}
+  NeutralSound: {fileID: 0}
   audienceCharacters: []
+  AngryAudienceSound: {fileID: 5450927447290443927}
+  HappyAudienceSound: {fileID: 7872482823271810888}
+  ClappingAudienceSound: {fileID: 4395014547004564243}
+--- !u!114 &5450927447290443927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5437408670222299436, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 58577317057186235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546690294071090926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!2083052967 &6617212612813235047 stripped
 VisualEffect:
   m_CorrespondingSourceObject: {fileID: 6558670481537460956, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
@@ -99,3 +252,14 @@ VisualEffect:
   m_CorrespondingSourceObject: {fileID: 7535870435235713036, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
   m_PrefabInstance: {fileID: 58577317057186235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7872482823271810888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+  m_PrefabInstance: {fileID: 58577317057186235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4546690294071090926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

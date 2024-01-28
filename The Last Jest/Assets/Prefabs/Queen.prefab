@@ -18,9 +18,65 @@ PrefabInstance:
 
         AngryMeter'
       objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Queen_Angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 944306147
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1101376622
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -826040670
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847701674904121630, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -65105912
+      objectReference: {fileID: 0}
     - target: {fileID: 2260214337884671972, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Queen_Happy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 814732142
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1227374382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1295433101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338770004954991696, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 918132171
       objectReference: {fileID: 0}
     - target: {fileID: 2822886070912607138, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
@@ -61,6 +117,34 @@ PrefabInstance:
     - target: {fileID: 3226066979026804211, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 84.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Queen_Embarrassed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 453902195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1153332344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1520007559
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336440546973674152, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -2132619114
       objectReference: {fileID: 0}
     - target: {fileID: 4360009118734025850, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
@@ -285,6 +369,34 @@ PrefabInstance:
     - target: {fileID: 7535870435235713036, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Character_Moods/Queen_Sad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -138615083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1231895343
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1075704200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895010981773692659, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -483254405
       objectReference: {fileID: 0}
     - target: {fileID: 8037244791023188053, guid: bb8ac8e07624f2345921d64194d69418, type: 3}
       propertyPath: m_LocalPosition.x
