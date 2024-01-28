@@ -25,6 +25,7 @@ public class JokeManager : MonoBehaviour
 
     public enum Noun
     {
+        None,
         King,
         Executioner,
         Heir,
@@ -37,6 +38,7 @@ public class JokeManager : MonoBehaviour
 
     public enum Verb
     {
+        None,
         Is,
         Farts,
         Loves,
@@ -47,6 +49,7 @@ public class JokeManager : MonoBehaviour
 
     public enum Adjective
     {
+        None,
         Ugly,
         Funny,
         Fat,
@@ -134,6 +137,8 @@ public class JokeManager : MonoBehaviour
         if (GameOver)
             return;
 
+        StartNextRound();
+
         if (JokeCount == 3)
         {
             StartLevel(2);
@@ -147,6 +152,11 @@ public class JokeManager : MonoBehaviour
             GameOver = true;
             Debug.Log("YOU WON - You told " + JokeCount + " Jokes. Press 'R' to Restart");
         }
+    }
+
+    private void StartNextRound()
+    {
+        UIManagerObject.InitializeRound();
     }
 
     public void SubmitJoke(Noun subject, Verb verb, Noun jokeObject)

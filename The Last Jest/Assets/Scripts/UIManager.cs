@@ -102,6 +102,7 @@ public class UIManager : MonoBehaviour
         adjectiveSelector.onValueChanged.AddListener(delegate { AdjectiveSelected(adjectiveSelector); });
 
         AdjectiveSelected(adjectiveSelector);
+        InitializeRound();
     }
 
     public void SubmitJoke()
@@ -116,36 +117,117 @@ public class UIManager : MonoBehaviour
     {
         selectedSubject = (JokeManager.Noun)Enum.Parse( typeof(JokeManager.Noun), subjectSelector.options[subjectSelector.value].text);
 
-        SubjectImage.sprite = subjectSelector.options[subjectSelector.value].image;
+        SetSelectedSubject(selectedSubject);
     }
     void VerbSelected(TMP_Dropdown verbSelector)
     {
         selectedVerb = (JokeManager.Verb)Enum.Parse(typeof(JokeManager.Verb), verbSelector.options[verbSelector.value].text);
-        if (selectedVerb == JokeManager.Verb.Is)
-            selectedStructure = JokeManager.JokeStructure.SubjectIsAdjective;
-        else
-            selectedStructure = JokeManager.JokeStructure.SubjectVerbObject;
-
-        VerbImage.sprite = verbSelector.options[verbSelector.value].image;
+        SetSelectedVerb(selectedVerb);
     }
 
     void ObjectSelected(TMP_Dropdown objectSelector)
     {
         selectedObject = (JokeManager.Noun)Enum.Parse(typeof(JokeManager.Noun), objectSelector.options[objectSelector.value].text);
 
-        ComplementImage.sprite = objectSelector.options[objectSelector.value].image;
+        SetSelectedObject(selectedObject);
     }
 
     void AdjectiveSelected(TMP_Dropdown adjectiveSelector)
     {
         selectedAdjective = (JokeManager.Adjective)Enum.Parse(typeof(JokeManager.Adjective), adjectiveSelector.options[adjectiveSelector.value].text);
 
-        ComplementImage.sprite = adjectiveSelector.options[adjectiveSelector.value].image;
+        SetSelectedAdjective(selectedAdjective);
     }
 
     public void ToggleVisibility()
     {
         panel.SetActive(!panel.activeInHierarchy);
         ShowHideText.text = panel.activeInHierarchy ? "/\\" : "\\/";
+    }
+
+    public void InitializeRound()
+    {
+        verbSelector.gameObject.SetActive(false);
+        objectSelector.gameObject.SetActive(false);
+        adjectiveSelector.gameObject.SetActive(false);
+
+        ResetSubject();
+        ResetVerb();
+        ResetAdjective();
+        ResetObject();
+
+        submitButton.enabled = false;
+    }
+
+    private void ResetObject()
+    {
+        objectSelector.value = 0;
+        SetSelectedObject(JokeManager.Noun.None);
+    }
+
+    private void ResetAdjective()
+    {
+        adjectiveSelector.value = 0;
+        SetSelectedAdjective(JokeManager.Adjective.None);
+    }
+
+    private void ResetVerb()
+    {
+        verbSelector.value = 0;
+        SetSelectedVerb(JokeManager.Verb.None);
+    }
+
+    private void ResetSubject()
+    {
+        subjectSelector.value = 0;
+        SetSelectedSubject(JokeManager.Noun.None);
+    }
+
+    private void SetSelectedObject(JokeManager.Noun noun)
+    {
+        ComplementImage.sprite = noun != JokeManager.Noun.None ? objectSelector.options[objectSelector.value].image : null;
+
+        submitButton.enabled = true;
+    }
+
+    private void SetSelectedAdjective(JokeManager.Adjective adjective)
+    {
+        ComplementImage.sprite = adjective != JokeManager.Adjective.None ? adjectiveSelector.options[adjectiveSelector.value].image : null;
+        submitButton.enabled = true;
+    }
+
+    private void SetSelectedSubject(JokeManager.Noun noun)
+    {
+        SubjectImage.sprite = noun != JokeManager.Noun.None ? subjectSelector.options[subjectSelector.value].image : null;
+
+        verbSelector.gameObject.SetActive(true);
+    }
+
+    private void SetSelectedVerb(JokeManager.Verb verb)
+    {
+        if (verb == JokeManager.Verb.None)
+        {
+            VerbImage.sprite = null;
+            objectSelector.gameObject.SetActive(false);
+            adjectiveSelector.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (verb == JokeManager.Verb.Is)
+            {
+                selectedStructure = JokeManager.JokeStructure.SubjectIsAdjective;
+                adjectiveSelector.gameObject.SetActive(true);
+                objectSelector.gameObject.SetActive(false);
+            }
+            else
+            {
+                selectedStructure = JokeManager.JokeStructure.SubjectVerbObject;
+                objectSelector.gameObject.SetActive(true);
+                adjectiveSelector.gameObject.SetActive(false);
+            }
+
+            VerbImage.sprite = verbSelector.options[verbSelector.value].image;
+        }
+        submitButton.enabled = false;
     }
 }

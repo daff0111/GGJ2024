@@ -429,9 +429,9 @@ RectTransform:
   - {fileID: 1616238900}
   m_Father: {fileID: 952236743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 264.9, y: 0.0000023842}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 105, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70573276
@@ -986,14 +986,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 853801605}
     m_Modifications:
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2067845542932256396, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: CharacterType
       value: 4
@@ -1041,6 +1033,14 @@ PrefabInstance:
     - target: {fileID: 8592874230459743236, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_Name
       value: Jester
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1099,9 +1099,9 @@ RectTransform:
   - {fileID: 1982507282}
   m_Father: {fileID: 70573275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 248.6, y: 16.30001}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 105, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296245911
@@ -6959,9 +6959,9 @@ RectTransform:
   - {fileID: 836844210}
   m_Father: {fileID: 70573275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 248.10002, y: -21}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 105, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616238901
