@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{58ad206a-7c25-4d31-80ef-1ba22c6c45c2}">
+		<property name="assetPath">
+			<value>Crowds, Laughter, Audience, Comedy Club, 200 People, Komedia Comic Boom, Brighton 03 SND22581.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>11.268583333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8b946a3c-46de-4bc8-89f9-428c7c880fff}</destination>
+		</relationship>
+	</object>
+</objects>

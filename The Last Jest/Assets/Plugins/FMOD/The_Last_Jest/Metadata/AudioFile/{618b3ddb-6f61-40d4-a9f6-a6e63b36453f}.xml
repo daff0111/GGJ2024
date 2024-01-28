@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{618b3ddb-6f61-40d4-a9f6-a6e63b36453f}">
+		<property name="assetPath">
+			<value>Jest_down.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1874791666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8b946a3c-46de-4bc8-89f9-428c7c880fff}</destination>
+		</relationship>
+	</object>
+</objects>

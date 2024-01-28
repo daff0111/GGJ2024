@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Bank" id="{5f5b0d3f-53c1-4116-8fec-6b41d5d98c1c}">
+		<property name="name">
+			<value>Tarot_Cards</value>
+		</property>
+		<relationship name="folder">
+			<destination>{726309ab-3980-40a3-98c4-edbbce02b841}</destination>
+		</relationship>
+	</object>
+</objects>
