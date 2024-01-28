@@ -57,6 +57,7 @@ public class JokeManager : MonoBehaviour
         Stupid,
         Small,
         Big,
+        Pig,
     }
 
     public UIManager UIManagerObject;
