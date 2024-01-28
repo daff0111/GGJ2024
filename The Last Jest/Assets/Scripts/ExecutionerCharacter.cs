@@ -7,8 +7,9 @@ public class ExecutionerCharacter : Character
     public GameObject ExecutionerAxe;
     public JesterCharacter Jester;
 
-    public void KillJester()
+    public IEnumerator KillJester()
     {
+        yield return new WaitForSeconds(0.15f);
         ExecutionerAxe.transform.rotation = Quaternion.Euler(0, 0, -80);
         ExecutionerAxe.transform.localPosition = new Vector3(-0.1f, 0.6f, -0.475f);
         Jester.DropHead();
