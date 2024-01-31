@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.33694, g: 325.04984, b: 430.2193, a: 1}
+  m_IndirectSpecularColor: {r: 261.8995, g: 324.45413, b: 429.43256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -634,14 +634,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2811107505070314244, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -685,6 +677,14 @@ PrefabInstance:
     - target: {fileID: 8592874230459743236, guid: 4f9f72c3ba02fe440b3252f4d094c18e, type: 3}
       propertyPath: m_Name
       value: Jester2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174407862940966777, guid: 0f3114cbd8680a3418abdf844a911eb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4360,6 +4360,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1110016286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811107505070314244, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8592874230459743236, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
+      propertyPath: m_Name
+      value: Jester 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fac0dd79c1b235b419abc1d86379e929, type: 3}
 --- !u!1 &1136307127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,6 +5907,20 @@ MonoBehaviour:
   SubjectImage: {fileID: 1904044509}
   VerbImage: {fileID: 2012712866}
   ComplementImage: {fileID: 1728369220}
+  LevelText: {fileID: 0}
+  RoundText: {fileID: 0}
+  CardAnimator: {fileID: 0}
+  LevelBeginDelay: 2.5
+  RoundBeginDelay: 2.5
+  SubmissionDelay: 2.5
+  gameOverDelay: 2.5
+  announcementText: {fileID: 0}
+  announcementBack: {fileID: 0}
+  cardBack: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  gameOverText: {fileID: 0}
+  jokeCountText: {fileID: 0}
+  playAgain: {fileID: 0}
 --- !u!114 &1455840417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10084,3 +10155,4 @@ SceneRoots:
   - {fileID: 1136307131}
   - {fileID: 1641437622}
   - {fileID: 864142843}
+  - {fileID: 1110016286}

@@ -206,7 +206,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420601785986968
+  lastModified: 638420537321860194
   FileSizes:
   - Name: Desktop
     Value: 2472
@@ -308,7 +308,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420601786093216
+  lastModified: 638420505642886609
   FileSizes:
   - Name: Desktop
     Value: 572000
@@ -438,7 +438,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420601785926551
+  lastModified: 638420505642796010
   FileSizes:
   - Name: Desktop
     Value: 302016
@@ -528,7 +528,7 @@ MonoBehaviour:
   - {fileID: -676524760872529252}
   StringsBanks:
   - {fileID: -3428321775351771228}
-  cacheTime: 638420601786380719
+  cacheTime: 638420537321930866
   cacheVersion: 131616
 --- !u!114 &237174538320804270
 MonoBehaviour:
@@ -572,7 +572,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Tarot_Cards.bank
   Name: Tarot_Cards
   StudioPath: bank:/Tarot_Cards
-  lastModified: 638420601786178905
+  lastModified: 638420537321930866
   FileSizes:
   - Name: Desktop
     Value: 249280
@@ -841,7 +841,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Audience.bank
   Name: Audience
   StudioPath: bank:/Audience
-  lastModified: 638420601786380719
+  lastModified: 638420505642695221
   FileSizes:
   - Name: Desktop
     Value: 2185728
@@ -971,7 +971,7 @@ MonoBehaviour:
   Path: Assets/Plugins/FMOD/The_Last_Jest/Build/Desktop/Character_Moods.bank
   Name: Character_Moods
   StudioPath: bank:/Character_Moods
-  lastModified: 638420601785846825
+  lastModified: 638420537321824597
   FileSizes:
   - Name: Desktop
     Value: 1056416
